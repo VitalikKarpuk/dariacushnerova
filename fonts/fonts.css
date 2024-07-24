@@ -1,0 +1,78 @@
+@font-face {
+  font-family: "DelaGothicOne";
+  src: url("./DelaGothicOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DelaGothicOne Bold";
+  src: url("./DelaGothicOne-Regular.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DelaGothicOne Medium";
+  src: url("./DelaGothicOne-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DelaGothicOne Semi Bold";
+  src: url("./DelaGothicOne-Regular.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: "LibreBaskerville";
+  src: url("./LibreBaskerville-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("./SpaceGrotesk-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LibreBaskerville-Italic";
+  src: url("./LibreBaskerville-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Signika";
+  src: url("./Signika.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+:root {
+  --ff--replacement-font: Arial, sans-serif;
+  --ff--inter-regular: DelaGothicOne, var(--ff--replacement-font);
+  --ff--inter-bold: DelaGothicOne Bold, var(--ff--replacement-font);
+  --ff--inter-medium: DelaGothicOne Medium, var(--ff--replacement-font);
+  --ff--inter-semi-bold: DelaGothicOne Semi Bold, var(--ff--replacement-font);
+}
