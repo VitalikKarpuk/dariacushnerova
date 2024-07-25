@@ -93,7 +93,7 @@ const config = {
 
       backgroundImage: {
         "main-banner":
-          "linear-gradient(to right bottom, #1a71c8e0, #1a71c8e0), url('./src/assets/maindBanner.jpg')",
+          "linear-gradient(to right bottom, #1a71c8e0, #1a71c8e0), url('./assets/maindBanner.jpg')",
         statistics: "url('/assets/statisticsBg.svg')",
         mina: "url('src/assets/minaBg.png')",
         sui: "url('/assets/suiBg.png')",
