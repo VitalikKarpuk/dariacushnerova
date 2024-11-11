@@ -26,7 +26,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   font-family: "LibreBaskerville";
   src: url("./LibreBaskerville-Regular.ttf") format("truetype");
@@ -68,6 +67,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Lobster";
+  src: url("./Lobster-Regular.ttf");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "RubikMonoOne";
+  src: url("./RubikMonoOne-Regular.ttf");
+}
 /* stylelint-disable-next-line no-duplicate-selectors */
 :root {
   --ff--replacement-font: Arial, sans-serif;

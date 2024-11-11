@@ -80,20 +80,19 @@ const config = {
           to: { height: "0" },
         },
         "infinite-scroll": {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
+          "0": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(calc(-50% - 35.5px))" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "infinite-scroll": "infinite-scroll 65s linear infinite",
-        
+        "infinite-scroll": "infinite-scroll 25s linear infinite",
       },
 
       backgroundImage: {
         "main-banner":
-          "linear-gradient(to right bottom, #1a71c8e0, #1a71c8e0), url('./assets/maindBanner.jpg')",
+          "linear-gradient(to right bottom, #1a71c89c, #1a71c89c), url('./assets/maindBanner.jpg')",
         statistics: "url('/assets/statisticsBg.svg')",
         mina: "url('src/assets/minaBg.png')",
         sui: "url('/assets/suiBg.png')",

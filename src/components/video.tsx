@@ -16,11 +16,11 @@ const VideoFrame: FC = () => {
 
 const VideoSection: FC = () => {
   return (
-    <div className="container grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="container max-w-[70%]">
       <VideoFrame />
+      {/* <VideoFrame />
       <VideoFrame />
-      <VideoFrame />
-      <VideoFrame />
+      <VideoFrame /> */}
     </div>
   );
 };
