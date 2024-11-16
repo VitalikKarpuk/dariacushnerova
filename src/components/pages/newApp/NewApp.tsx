@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { FC } from "react";
 import { AnimatedButton } from "../../atoms/animatedButton/animatedButton";
