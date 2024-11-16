@@ -11,13 +11,23 @@ const Header: FC = () => {
         <Link to={"/"}>
           <img src={logo} alt="logo" className="h-[100px] relative top-3" />
         </Link>
-        <ScrollInfinite />
+        {/* <ScrollInfinite /> */}
 
-        <nav>
-          <Link to={"/programs"} className="text-base text-gray-600 font-normal font-[Roboto] hover:text-gray-400 transition-colors">Программы</Link>
+        <nav className="flex flex-row gap-6">
+          <Link
+            to={"/group"}
+            className="text-base text-gray-600 font-normal font-[Roboto] hover:text-gray-400 transition-colors"
+          >
+            Группа
+          </Link>
+          <Link
+            to={"/programs"}
+            className="text-base text-gray-600 font-normal font-[Roboto] hover:text-gray-400 transition-colors"
+          >
+            Программы
+          </Link>
         </nav>
       </div>
-
     </header>
   );
 };

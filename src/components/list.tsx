@@ -4,29 +4,17 @@ import listImg from "../assets/list.jpg";
 const List: FC = () => {
   return (
     <div className="container py-10  flex flex-col gap-y-4 md:flex-row gap-x-8 justify-between">
-      <div className="max-w-full flex justify-center">
-        <div className="flex h-full   items-center justify-center flex-col gap-y-2 font-bold md:text-[30px] text-center opacity-90">
-          <p className="font-medium md:text-[20px] text-center opacity-90 text-[#0D47A1]">
-            Если в этих пунктах вы узнали себя, тогда приглашаю Вас на мой курс
-            "Группа Роста", где вы станите востребовательным специалистом с
-            очередью из клиенотот и пройдете путь <span className="font-extrabold text-black">От мечты к реальности</span>
-          </p>
-          {/* <div>От мечты к реальности</div> */}
-          {/* <ul className="font-medium md:text-[20px] text-center opacity-90 text-[#0D47A1]">
-            Для тех кто хочет
-            <li>выстроить понятную систему работе и бизнесе</li>
-            <li>выстроить понятную систему работе и бизнесе</li>
-            <li>
-              увеличить количество клиентов и сделать доход стабильно растущим
-            </li>
-            <li>собрать команду и делегировать</li>
-            <li>
-              перейти из сотрудника в руководителя - создать свои курсы и
-              обучения
-            </li>
-            <li>меньше работать, но больше зарабатыват</li>
-          </ul> */}
-        </div>
+      <div className="md:w-1/2 text-center md:text-left flex flex-col justify-center gap-4">
+        <p className="text-[#2A6F97] text-lg md:text-xl font-medium leading-relaxed">
+          Если в этих пунктах вы узнали себя, тогда приглашаю вас на мой курс{" "}
+          <span className="font-semibold text-[#0D47A1]">"Группа Роста"</span>,
+          где вы станете востребованным специалистом с{" "}
+          <span className="font-semibold text-[#0D47A1]">
+            очередью из клиентов
+          </span>{" "}
+          и пройдете путь{" "}
+          <span className="font-bold text-black">от мечты к реальности</span>.
+        </p>
       </div>
       <div className="min-w-[300px] flex">
         <img

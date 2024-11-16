@@ -91,6 +91,7 @@ const config = {
       },
 
       backgroundImage: {
+        "main-banner2": "url('./assets/main.png')",
         "main-banner":
           "linear-gradient(to right bottom, #1a71c89c, #1a71c89c), url('./assets/maindBanner.jpg')",
         statistics: "url('/assets/statisticsBg.svg')",

@@ -1,75 +1,53 @@
 import { FC } from "react";
+import {
+  CogIcon,
+  ChartBarIcon,
+  UserGroupIcon,
+  CircleStackIcon,
+  BanknotesIcon
+} from "@heroicons/react/24/outline";
 
 const list = [
   {
-    title: "выстроить понятную систему работе и бизнесе",
+    title: "Выстроить понятную систему в работе и бизнесе",
+    icon: <CogIcon className="w-8 h-8 text-[#0D47A1]" />,
   },
   {
-    title: "увеличить количество клиентов и сделать доход стабильно растущим",
+    title: "Увеличить количество клиентов и сделать доход стабильно растущим",
+    icon: <ChartBarIcon className="w-8 h-8 text-[#0D47A1]" />,
   },
   {
-    title: "собрать команду и делегировать",
+    title: "Собрать команду и делегировать",
+    icon: <UserGroupIcon className="w-8 h-8 text-[#0D47A1]" />,
   },
   {
     title:
-      "перейти из сотрудника в руководителя - создать свои курсы и обучения",
+      "Перейти из сотрудника в руководителя — создать свои курсы и обучения",
+    icon: <CircleStackIcon className="w-8 h-8 text-[#0D47A1]" />,
   },
   {
-    title:
-      " перейти из сотрудника в руководителя - создать свои курсы и обучения",
-  },
-  {
-    title: "меньше работать, но больше зарабатыват",
+    title: "Меньше работать, но больше зарабатывать",
+    icon: <BanknotesIcon className="w-8 h-8 text-[#0D47A1]" />,
   },
 ];
 
 const Metrics: FC = () => {
   return (
-    <div className="bg-white">
-      <div className="container flex flex-col gap-y-3 mt-10 mb-10 md:flex-row md:flex-wrap md:grid md:grid-cols-2 md:grid-rows-2 md:gap-3">
-        {list.map(({ title }) => {
-          return (
-            <div className="bg-[#F2F2F2] py-[40px] px-[16px] flex items-center justify-center flex-col">
-              <div className="text-[#2A6F97] text-[24px] md:text-[32px] font-bold text-center">
-                {title}
-              </div>
+    <div className="bg-[#F9FAFB] py-12">
+      <div className="container grid gap-6 md:grid-cols-2">
+        {list.map(({ title, icon }, index) => (
+          <div
+            key={index}
+            className={`${
+              index === list.length - 1 ? "col-span-full" : "md:w-auto"
+            } bg-white rounded-lg shadow-md p-6 flex items-center justify-start space-x-4 text-center hover:shadow-lg transition`}
+          >
+            <div className="text-[#0D47A1]">{icon}</div>
+            <div className="text-[#2A6F97] text-lg md:text-xl font-semibold leading-relaxed">
+              {title}
             </div>
-          );
-        })}
-
-        {/* <div className="bg-[#F2F2F2] py-[40px] px-[16px] flex items-center justify-center flex-col">
-          <div className="text-[#2A6F97] text-[24px] md:text-[32px] font-bold text-center">
-            4000+
           </div>
-          <p className="font-[Roboto] text-[#012A4A] text-[20px] font-medium mt-5 text-center">
-            часов психологической практики
-          </p>
-        </div>
-        <div className="bg-[#F2F2F2] py-[40px] px-[16px] flex items-center justify-center flex-col">
-          <div className="text-[#2A6F97] text-[24px] md:text-[32px] font-bold text-center">
-            300+
-          </div>
-          <p className="font-[Roboto] text-[#012A4A] text-[20px] font-medium mt-5 text-center">
-            клиентов за 4 года
-          </p>
-        </div>
-        <div className="bg-[#F2F2F2] py-[40px] px-[16px] flex items-center justify-center flex-col">
-          <div className="text-[#2A6F97] text-[24px] md:text-[32px] font-bold text-center">
-            ВЫСТУПЛЕНИЯ
-          </div>
-          <p className="font-[Roboto] text-[#012A4A] text-[20px] font-medium mt-5 text-center">
-            на ТВ, радио и конференциях
-          </p>
-        </div>
-        <div className="bg-[#F2F2F2] py-[40px] px-[16px] flex items-center justify-center flex-col">
-          <div className="text-[#2A6F97] text-[24px] md:text-[32px] font-bold text-center">
-            ВЫСШЕЕ ОБРАЗОВАНИЕ
-          </div>
-          <p className="font-[Roboto] text-[#012A4A] text-[20px] font-medium mt-5 text-center">
-            аналитического психолога, коуча ICF (отвечающего международным
-            стандартам)
-          </p>
-        </div> */}
+        ))}
       </div>
     </div>
   );

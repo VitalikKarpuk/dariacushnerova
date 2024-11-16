@@ -81,3 +81,11 @@
     --ring: 212.7 26.8% 83.9%;
   }
 }
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #0D47A1, #2A6F97);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
