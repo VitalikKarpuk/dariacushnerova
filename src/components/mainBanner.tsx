@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Button } from "./atoms/button";
 
 const MainBanner: FC = () => {
   return (

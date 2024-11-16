@@ -1,5 +1,4 @@
 import { FC } from "react";
-import listImg from "../assets/list.jpg";
 
 const ListProblems: FC = () => {
   return (

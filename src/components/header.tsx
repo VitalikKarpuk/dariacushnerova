@@ -1,8 +1,7 @@
 import { FC } from "react";
 
 import logo from "../assets/logo.svg";
-import { Link, useNavigate, useRoutes } from "react-router-dom";
-import { ScrollInfinite } from "./atoms/scrollInfinite";
+import { Link } from "react-router-dom";
 
 const Header: FC = () => {
   return (

@@ -1,5 +1,3 @@
-import React, { useEffect, useRef } from "react";
-
 const text = "От мечты к реальности";
 
 const InfiniteScroll = () => {

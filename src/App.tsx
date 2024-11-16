@@ -1,7 +1,5 @@
-import { Link } from "react-router-dom";
 import "./App.css";
 import { Footer, Header, List, MainBanner, Metrics } from "./components";
-import { ListProblems } from "./components/listProblems";
 import { CheckCircleIcon } from "@heroicons/react/20/solid";
 import { FC } from "react";
 import { AnimatedButton } from "./components/atoms/animatedButton/animatedButton";
