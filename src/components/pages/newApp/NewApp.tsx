@@ -236,7 +236,7 @@ function NewApp() {
           все, чтобы сделать вас счастливой и здоровой женщиной!
         </p>
       </div>
-      <SpeakersSection />
+       <SpeakersSection />
       <div className="bg-gradient-to-r from-[#0b243d] to-[#081a2b] p-10 text-white text-center rounded-lg shadow-lg mt-10">
         <h2 className="text-4xl md:text-5xl font-bold tracking-wide mb-6">
           ЖИЗНЬ БЕЗ БОЛИ
@@ -247,11 +247,9 @@ function NewApp() {
       </div>
       <BenefitsBlocks />
       <PriceSection />
-      {/* <List /> */}
-      {/* <Metrics /> */}
       <div className="container">
-        <Link
-          to={
+        <a
+          href={
             "https://docs.google.com/forms/d/e/1FAIpQLSen_LDTX4zo3ByJLAQ-Lv0VLE4dv83DnIpj_ksDAoNoyPuIPQ/viewform?usp=sharing"
           }
           target="_blank"
@@ -261,7 +259,7 @@ function NewApp() {
               Принять участие в конференции
             </p>
           </AnimatedButton>
-        </Link>
+        </a>
       </div>
       <TestimonialsSection />
       <JoinConferenceSection />

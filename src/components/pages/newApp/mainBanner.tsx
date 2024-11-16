@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Link } from "react-router-dom";
 
 const MainBanner: FC = () => {
   return (
@@ -15,15 +14,15 @@ const MainBanner: FC = () => {
         </div>
         {/* Добавление кнопки для действия */}
         <div className="mt-6">
-          <Link
-            to={
+          <a
+            href={
               "https://docs.google.com/forms/d/e/1FAIpQLSen_LDTX4zo3ByJLAQ-Lv0VLE4dv83DnIpj_ksDAoNoyPuIPQ/viewform?usp=sharing"
             }
             target="_blank"
             className="px-8 py-3 bg-[#0B243D] text-white text-lg font-semibold rounded-full hover:bg-[#1D3B5C] transition duration-300"
           >
             Присоединиться
-          </Link>
+          </a>
         </div>
       </div>
     </div>

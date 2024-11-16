@@ -53,15 +53,15 @@ const PriceSection = () => {
                 </li>
               ))}
             </ul>
-            <Link
-              to={
+            <a
+              href={
                 "https://docs.google.com/forms/d/e/1FAIpQLSen_LDTX4zo3ByJLAQ-Lv0VLE4dv83DnIpj_ksDAoNoyPuIPQ/viewform?usp=sharing"
               }
               target="_blank"
               className="self-center py-2 px-6 bg-[#2A6F97] text-white rounded-md hover:bg-[#1a5a6d] transition-all duration-300"
             >
               Забронировать
-            </Link>
+            </a>
           </div>
         ))}
       </div>
