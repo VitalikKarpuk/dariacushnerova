@@ -1,4 +1,11 @@
-import { SparklesIcon, HeartIcon, UserIcon, PlayIcon, CalendarIcon, BoltIcon } from "@heroicons/react/24/outline";
+import {
+  SparklesIcon,
+  HeartIcon,
+  UserIcon,
+  PlayIcon,
+  CalendarIcon,
+  BoltIcon
+} from "@heroicons/react/24/outline";
 
 const BenefitsBlocks = () => {
   const blocks = [
@@ -35,17 +42,26 @@ const BenefitsBlocks = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-8">
-      {blocks.map((block, index) => (
-        <div
-          key={index}
-          className="flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-lg hover:scale-105 transition-all duration-300"
-        >
-          <div className="mb-4">{block.icon}</div>
-          <h4 className="text-xl font-semibold text-[#0B243D] mb-2">{block.title}</h4>
-          <p className="text-center text-[#2A6F97] text-sm">{block.description}</p>
-        </div>
-      ))}
+    <div className="container mx-auto py-10">
+      <h2 className="text-3xl md:text-4xl font-bold text-center text-[#0B243D] mb-8">
+        Что вы получите
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {blocks.map((block, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center text-center p-6 bg-gradient-to-b from-[#F3F7FC] to-white rounded-xl shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300"
+          >
+            <div className="mb-4">{block.icon}</div>
+            <h4 className="text-lg md:text-xl font-semibold text-[#0B243D] mb-2">
+              {block.title}
+            </h4>
+            <p className="text-sm md:text-base text-[#2A6F97]">
+              {block.description}
+            </p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

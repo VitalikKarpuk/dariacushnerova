@@ -1,9 +1,9 @@
-
 const PriceSection = () => {
   const plans = [
     {
       title: "Базовый тариф",
-      price: "75 BYN",
+      initPrice: '95',
+      price: "75",
       seats: "43 мест",
       benefits: [
         "Участие в конференции",
@@ -14,7 +14,8 @@ const PriceSection = () => {
     },
     {
       title: "ВИП тариф",
-      price: "165 BYN",
+      initPrice: '195',
+      price: "165",
       seats: "7 мест",
       benefits: [
         "Участие в конференции",
@@ -42,7 +43,14 @@ const PriceSection = () => {
           >
             <div className="text-center mb-6">
               <h3 className="text-xl font-semibold">{plan.title}</h3>
-              <p className="text-lg font-bold">{plan.price}</p>
+              <div className="flex flex-col items-center">
+                <p className="text-lg font-bold line-through text-red-500">
+                  {plan.initPrice} BYN
+                </p>
+                <p className="text-2xl font-bold text-green-600">
+                  {plan.price} BYN
+                </p>
+              </div>
               <p className="text-sm text-[#2A6F97]">{plan.seats}</p>
             </div>
             <ul className="list-disc list-inside space-y-2 mb-6">
