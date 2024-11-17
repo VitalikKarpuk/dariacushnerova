@@ -2,6 +2,7 @@ import { FC } from "react";
 import DaryaImg from "./darya.jpeg";
 import ElenaImg from "./elena.jpeg";
 import OlgaImg from "./olga.jpeg";
+import { AnimatedButton } from "../../atoms/animatedButton/animatedButton";
 interface SpeakerProps {
   photo?: string; // URL фотографии спикера (опционально)
   name: string; // Имя спикера
@@ -92,6 +93,20 @@ const SpeakersSection = () => {
             />
           ))}
         </div>
+      </div>
+      <div className="container mt-7">
+        <a
+          href={
+            "https://docs.google.com/forms/d/e/1FAIpQLSen_LDTX4zo3ByJLAQ-Lv0VLE4dv83DnIpj_ksDAoNoyPuIPQ/viewform?usp=sharing"
+          }
+          target="_blank"
+        >
+          <AnimatedButton>
+            <p className="text-white text-2xl font-bold uppercase tracking-wide mb-2">
+              Принять участие в конференции
+            </p>
+          </AnimatedButton>
+        </a>
       </div>
     </div>
   );

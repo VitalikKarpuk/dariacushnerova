@@ -17,6 +17,17 @@ const Footer = () => {
           Сайт носит рекламно-информационный характер и не является
           интернет-магазином. Указанные цены не являются публичной офертой.
         </p>
+        <p className="text-xs sm:text-sm md:text-sm text-gray-400 mt-4">
+          Сайт разработан{" "}
+          <a
+            href="https://t.me/VitaliKarpuk"
+            className="text-[#a84040] hover:text-[#ff6a00] underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            VitaliKarpuk
+          </a>
+        </p>
       </div>
     </footer>
   );

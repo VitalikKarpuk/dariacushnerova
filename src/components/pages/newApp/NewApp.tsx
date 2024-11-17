@@ -89,7 +89,7 @@ function NewApp() {
       </div>
 
       <SpeakersSection />
-      <div className="bg-gradient-to-r from-[#0b243d] to-[#081a2b] p-6 md:p-10 text-white text-center rounded-lg shadow-lg mt-6 md:mt-10">
+      <div className="bg-gradient-to-r from-[#0b243d] to-[#081a2b] p-6 md:p-10 text-white text-center shadow-lg mt-6 md:mt-10">
         <h2 className="text-3xl md:text-5xl font-bold tracking-wide mb-4 md:mb-6">
           ЖИЗНЬ БЕЗ БОЛИ
         </h2>
