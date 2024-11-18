@@ -2,7 +2,7 @@ import { FC } from "react";
 
 const MainBanner: FC = () => {
   return (
-    <div className="bg-main-banner2 bg-fixed bg-cover bg-no-repeat h-[400px] md:h-[500px] relative bg-[center_top_-350px] md:bg-[center_top_-420px]">
+    <div className="bg-main-banner2 bg-fixed md:bg-cover bg-no-repeat bg-[length:110%] h-[400px] md:h-[500px] relative bg-[center_top] md:bg-[center_top_-300px]  lg:bg-[center_top_-420px]">
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70"></div>{" "}
       {/* Градиент для фона */}
       <div className="flex flex-col items-center justify-center w-full h-full container text-center relative z-10">
