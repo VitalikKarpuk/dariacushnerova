@@ -4,7 +4,7 @@ const PriceSection = () => {
       title: "Базовый тариф",
       initPrice: "95",
       price: "75",
-      blackFridayPrice: "65",
+      blackFridayPrice: "68",
       seats: "43 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
@@ -22,7 +22,7 @@ const PriceSection = () => {
       title: "ВИП тариф",
       initPrice: "195",
       price: "165",
-      blackFridayPrice: "145",
+      blackFridayPrice: "149",
       seats: "7 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
