@@ -5,7 +5,7 @@ const PriceSection = () => {
       initPrice: "95",
       price: "75",
       blackFridayPrice: "68",
-      seats: "43 мест",
+      seats: "15 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
         { text: "Кофе пауза", isPrize: false },
@@ -23,7 +23,7 @@ const PriceSection = () => {
       initPrice: "195",
       price: "165",
       blackFridayPrice: "149",
-      seats: "7 мест",
+      seats: "2 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
         { text: "Кофе пауза", isPrize: false },
