@@ -3,8 +3,8 @@ const PriceSection = () => {
     {
       title: "Базовый тариф",
       initPrice: "95",
-      price: "75",
-      seats: "43 мест",
+      price: "85",
+      seats: "7 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
         { text: "Кофе пауза", isPrize: false },
@@ -17,8 +17,8 @@ const PriceSection = () => {
     {
       title: "ВИП тариф",
       initPrice: "195",
-      price: "165",
-      seats: "7 мест",
+      price: "175",
+      seats: "1 мест",
       benefits: [
         { text: "Участие в конференции", isPrize: false },
         { text: "Кофе пауза", isPrize: false },
