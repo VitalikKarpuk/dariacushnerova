@@ -1,3 +1,5 @@
+import { Button, ButtonJs } from "my-app-vitali-test";
+
 const PriceSection = () => {
   const plans = [
     {
@@ -9,7 +11,10 @@ const PriceSection = () => {
         { text: "Участие в конференции", isPrize: false },
         { text: "Кофе пауза", isPrize: false },
         { text: "Книга по сбалансированому питанию", isPrize: true },
-        { text: "Розыгрыш консультации от врача невролога Елены Корень", isPrize: true },
+        {
+          text: "Розыгрыш консультации от врача невролога Елены Корень",
+          isPrize: true,
+        },
         { text: 'Доступ к вебинару "Секреты денег"', isPrize: true },
         { text: "Доступ к закрытому чату единомышленников", isPrize: false },
       ],
@@ -24,12 +29,24 @@ const PriceSection = () => {
         { text: "Кофе пауза", isPrize: false },
         { text: "Книга по сбалансированому питанию", isPrize: true },
         { text: 'Доступ к вебинару "Секреты денег"', isPrize: true },
-        { text: "Диагностика осанки + 1 тренировка в записи от Ольги Старцевой", isPrize: true },
-        { text: "Консультация + 1 сеанс газовых уколов от Елены Корень", isPrize: true },
-        { text: "Личная консультация по методу управления реальностью от Дарьи Кушнеровой", isPrize: true },
+        {
+          text: "Диагностика осанки + 1 тренировка в записи от Ольги Старцевой",
+          isPrize: true,
+        },
+        {
+          text: "Консультация + 1 сеанс газовых уколов от Елены Корень",
+          isPrize: true,
+        },
+        {
+          text: "Личная консультация по методу управления реальностью от Дарьи Кушнеровой",
+          isPrize: true,
+        },
         { text: "Доступ к закрытому чату единомышленников", isPrize: false },
         { text: "Закрытый ужин со спикерами", isPrize: false },
-        { text: "Отдельный чат со спикерами и возможностью общаться лично", isPrize: false },
+        {
+          text: "Отдельный чат со спикерами и возможностью общаться лично",
+          isPrize: false,
+        },
       ],
     },
   ];
@@ -49,17 +66,14 @@ const PriceSection = () => {
           >
             <div className="text-center mb-6">
               <h3 className="text-xl font-semibold">{plan.title}</h3>
-              <div className="flex flex-col items-center">
-                <p className="text-lg font-bold line-through text-red-500">
-                  {plan.initPrice} BYN
-                </p>
-                <p className="text-2xl font-bold text-green-600">
-                  {plan.price} BYN
-                </p>
+              <div className="flex flex-col items-center justify-center mt-6">
+                <div className="px-4 py-2 bg-red-500 text-white text-lg font-bold uppercase rounded-lg shadow-lg tracking-wide animate-pulse">
+                  Sold Out
+                </div>
               </div>
-              <p className="text-sm text-[#2A6F97]">{plan.seats}</p>
             </div>
-            <ul className="list-disc list-inside space-y-2 mb-6">
+
+            <ul className="list-disc list-inside space-y-2 mb-6 grow">
               {plan.benefits.map((benefit, index) => (
                 <li
                   key={index}
