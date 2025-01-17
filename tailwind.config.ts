@@ -106,7 +106,7 @@ const config = {
         api: "url('/assets/apiBg.png')",
         mns: "url('/assets/mnsBg.png')",
         mission: "url('/assets/mission.svg')",
-        groupsBg: "url('src/assets/groupBanner.jpg')",
+        groupsBg: "url('./assets/groupBanner.jpg')",
       },
     },
   },
