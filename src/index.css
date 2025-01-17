@@ -49,6 +49,12 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --primary-light: #ADD7F6;
+    --primary-base: #87BFFF;
+    --primary-dark: #3F8EFC;
+    --primary-darker: #2667FF;
+    --primary-deep: #3B28CC;
   }
 
   .dark {

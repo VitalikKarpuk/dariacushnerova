@@ -23,6 +23,11 @@ const config = {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       colors: {
+        section1: 'hsl(210, 76%, 85%)',
+        section2: 'hsl(211, 68%, 65%)',
+        section3: 'hsl(221, 80%, 55%)',
+        section4: 'hsl(245, 64%, 45%)',
+        section5: 'hsl(245, 74%, 35%)',
         mainBg: "hsl(var(--main-bg))",
         black: "hsl(var(--black))",
         warning: "hsl(var(--warning))",
@@ -88,6 +93,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "infinite-scroll": "infinite-scroll 25s linear infinite",
+        "spin-slow": "spin 3s linear infinite",
       },
 
       backgroundImage: {
@@ -100,6 +106,7 @@ const config = {
         api: "url('/assets/apiBg.png')",
         mns: "url('/assets/mnsBg.png')",
         mission: "url('/assets/mission.svg')",
+        groupsBg: "url('src/assets/groupBanner.jpg')",
       },
     },
   },
