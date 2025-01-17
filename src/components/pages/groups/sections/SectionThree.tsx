@@ -23,9 +23,13 @@ const SectionThree: React.FC = () => {
             <strong className="text-[hsl(245,64%,35%)]">Я ЛИДЕР</strong>, где вы
             реализуете задуманное ⬇️
           </p>
-          <button className="mt-6 px-6 py-3 bg-[hsl(245,64%,45%)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-[hsl(245,64%,40%)] transition-colors duration-300">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+            target="_blank"
+            className="mt-6 px-6 py-3 inline-block bg-[hsl(245,64%,45%)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-[hsl(245,64%,40%)] transition-colors duration-300"
+          >
             АНКЕТА ПРЕДЗАПИСИ в 7 поток
-          </button>
+          </a>
           <p className="text-sm text-gray-600 mt-4">
             Она позволит получить <strong>скидку 40%</strong> на участие
           </p>

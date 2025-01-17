@@ -26,7 +26,8 @@ const SectionEight: React.FC = () => {
       {/* Кнопка действия */}
       <div className="max-w-3xl mx-auto text-center mb-16">
         <a
-          href="#"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+          target="_blank"
           className="inline-block px-8 py-4 text-white font-bold text-lg rounded-full shadow-lg bg-[hsl(245,64%,45%)] hover:bg-[hsl(245,64%,40%)] transition-transform transform hover:scale-105"
         >
           Забронировать место на обучение с 40% скидкой

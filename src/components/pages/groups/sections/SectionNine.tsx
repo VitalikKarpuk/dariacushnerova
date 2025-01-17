@@ -93,7 +93,8 @@ const SectionNine: React.FC = () => {
 
         {/* CTA-кнопка */}
         <a
-          href="#anketa"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+          target="_blank"
           className="
             inline-block
             px-8
