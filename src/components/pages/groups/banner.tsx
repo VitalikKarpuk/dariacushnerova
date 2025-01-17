@@ -7,7 +7,7 @@ const Banner: React.FC = () => {
         relative 
         bg-groupsBg 
         flex items-center justify-center 
-        h-[400px] md:h-[500px] 
+        h-[500px] 
         bg-cover bg-center 
         text-center text-white
         overflow-hidden
