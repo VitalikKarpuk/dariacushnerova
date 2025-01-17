@@ -11,6 +11,7 @@ const Banner: React.FC = () => {
         bg-cover bg-center 
         text-center text-white
         overflow-hidden
+        bg-fixed 
       "
       style={{
         backgroundSize: "cover",

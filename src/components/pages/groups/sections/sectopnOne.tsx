@@ -57,75 +57,76 @@ const roadmapData = [
 
 const Timeline = () => {
   return (
-    <section className="container py-16 md:py-20 bg-gradient-to-b from-[hsl(210,76%,85%)] to-[hsl(210,60%,97%)]">
-      <SectionTitle
-        title="Вам точно сюда, если вы:"
-        color="hsl(245,64%,35%)"
-        align="center"
-      />
-
-      <div className="relative max-w-5xl mx-auto px-4 md:px-6">
-        {/* Линия таймлайна */}
-        <svg
-          className="absolute left-1/2 transform -translate-x-1/2 z-0"
-          width="100%"
-          height="100%"
-          viewBox="0 0 400 1000"
-          preserveAspectRatio="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M200 0 
+    <section className="relative py-16 md:py-20 bg-gradient-to-b from-[hsl(210,76%,85%)] to-[hsl(210,60%,97%)]">
+      <div className="container">
+        <SectionTitle
+          title="Вам точно сюда, если вы:"
+          color="hsl(245,64%,35%)"
+          align="center"
+        />
+        <div className="relative max-w-5xl mx-auto px-4 md:px-6">
+          {/* Линия таймлайна */}
+          <svg
+            className="absolute left-1/2 transform -translate-x-1/2 z-0"
+            width="100%"
+            height="100%"
+            viewBox="0 0 400 1000"
+            preserveAspectRatio="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M200 0 
               C220 100, 180 200, 200 300
               S220 500, 200 600
               Q180 700, 200 800
               T200 1000"
-            stroke="hsl(245,64%,45%)"
-            strokeWidth="6"
-            fill="none"
-            strokeDasharray="15 10"
-          />
-        </svg>
+              stroke="hsl(245,64%,45%)"
+              strokeWidth="6"
+              fill="none"
+              strokeDasharray="15 10"
+            />
+          </svg>
 
-        <div className="relative space-y-10 md:space-y-16">
-          {roadmapData.map((item, index) => (
-            <div
-              key={item.id}
-              className={`relative flex flex-col md:flex-row items-center ${
-                index % 2 === 0 ? "md:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Иконка в кружке */}
+          <div className="relative space-y-10 md:space-y-16">
+            {roadmapData.map((item, index) => (
               <div
-                className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full shadow-md z-20"
-                style={{ backgroundColor: item.color }}
-              >
-                {item.icon}
-              </div>
-
-              {/* Текстовая карточка */}
-              <div
-                className={`relative bg-white shadow-lg rounded-lg p-6 max-w-xs md:max-w-sm z-10 ${
-                  index % 2 === 0
-                    ? "md:mr-8 md:text-right"
-                    : "md:ml-8 md:text-left"
+                key={item.id}
+                className={`relative flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md:flex-row-reverse" : ""
                 }`}
-                style={{
-                  marginTop: "-1.5rem",
-                }}
               >
-                <h2
-                  className="text-lg md:text-xl font-bold mb-2"
-                  style={{ color: item.color }}
+                {/* Иконка в кружке */}
+                <div
+                  className="flex items-center justify-center w-16 h-16 md:w-20 md:h-20 rounded-full shadow-md z-20"
+                  style={{ backgroundColor: item.color }}
                 >
-                  {item.title}
-                </h2>
-                <p className="text-gray-600 text-sm md:text-base">
-                  {item.description}
-                </p>
+                  {item.icon}
+                </div>
+
+                {/* Текстовая карточка */}
+                <div
+                  className={`relative bg-white shadow-lg rounded-lg p-6 max-w-xs md:max-w-sm z-10 ${
+                    index % 2 === 0
+                      ? "md:mr-8 md:text-right"
+                      : "md:ml-8 md:text-left"
+                  }`}
+                  style={{
+                    marginTop: "-1.5rem",
+                  }}
+                >
+                  <h2
+                    className="text-lg md:text-xl font-bold mb-2"
+                    style={{ color: item.color }}
+                  >
+                    {item.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm md:text-base">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

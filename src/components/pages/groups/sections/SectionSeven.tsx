@@ -9,39 +9,43 @@ const SectionSeven: React.FC = () => {
   };
 
   return (
-    <section className="container relative py-16 md:py-20 bg-gradient-to-b from-[hsl(220,80%,98%)] to-[hsl(210,70%,90%)]">
-      {/* Заголовок секции */}
-      <div className="max-w-4xl mx-auto text-center mb-8">
-        <SectionTitle
-          title="Модули курса"
-          color="hsl(245,64%,35%)"
-          align="center"
-        />
-      </div>
+    <section className="relative py-16 md:py-20 bg-gradient-to-b from-[hsl(210,76%,85%)] to-[hsl(210,60%,97%)]">
+      <div className="container">
+        {/* Заголовок секции */}
+        <div className="max-w-4xl mx-auto text-center mb-8">
+          <SectionTitle
+            title="Модули курса"
+            color="hsl(245,64%,35%)"
+            align="center"
+          />
+        </div>
 
-      {/* Аккордеон */}
-      <div className="max-w-4xl mx-auto px-4">
-        <button
-          onClick={toggleAccordion}
-          className="w-full bg-[hsl(245,64%,45%)] text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[hsl(245,64%,40%)] transition-all"
-        >
-          {isOpen ? "Скрыть модули" : "Показать модули"}
-        </button>
+        {/* Аккордеон */}
+        <div className="max-w-4xl mx-auto px-4">
+          <button
+            onClick={toggleAccordion}
+            className="w-full bg-[hsl(245,64%,45%)] text-white text-lg font-bold py-4 px-6 rounded-lg shadow-lg hover:bg-[hsl(245,64%,40%)] transition-all"
+          >
+            {isOpen ? "Скрыть модули" : "Показать модули"}
+          </button>
 
-        {/* Содержимое аккордеона */}
-        {isOpen && (
-          <div className="mt-6 bg-white rounded-lg shadow-lg p-6 space-y-8">
-            {modules.map((module, index) => (
-              <div key={index} className="space-y-2">
-                <h3 className="text-xl font-bold text-[hsl(245,64%,35%)]">
-                  {module.title}
-                </h3>
-                <p className="text-gray-700 text-sm">{module.description}</p>
-                <p className="text-gray-500 text-sm italic">{module.result}</p>
-              </div>
-            ))}
-          </div>
-        )}
+          {/* Содержимое аккордеона */}
+          {isOpen && (
+            <div className="mt-6 bg-white rounded-lg shadow-lg p-6 space-y-8">
+              {modules.map((module, index) => (
+                <div key={index} className="space-y-2">
+                  <h3 className="text-xl font-bold text-[hsl(245,64%,35%)]">
+                    {module.title}
+                  </h3>
+                  <p className="text-gray-700 text-sm">{module.description}</p>
+                  <p className="text-gray-500 text-sm italic">
+                    {module.result}
+                  </p>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );

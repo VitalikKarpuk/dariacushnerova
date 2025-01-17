@@ -15,50 +15,52 @@ import {
 const SectionFour: React.FC = () => {
   return (
     <section
-      className="py-16 md:py-20 container"
+      className="relative py-16 md:py-20"
       style={{
         background:
           "linear-gradient(to bottom, hsl(220, 70%, 96%), hsl(220, 70%, 90%))",
       }}
     >
-      {/* Заголовок секции */}
-      <div className="max-w-4xl mx-auto text-center mb-12">
-        <SectionTitle
-          title="Что вас ждет:"
-          color="hsl(245,64%,35%)"
-          align="center"
-        />
-      </div>
+      <div className="container">
+        {/* Заголовок секции */}
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <SectionTitle
+            title="Что вас ждет:"
+            color="hsl(245,64%,35%)"
+            align="center"
+          />
+        </div>
 
-      {/* Список элементов */}
-      <div className="relative max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <div
-            key={index}
-            className="relative bg-gradient-to-br from-[hsl(245,70%,55%)] to-[hsl(210,70%,50%)] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            {/* Иконка */}
-            <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white text-[hsl(245,64%,45%)] rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
-              {feature.icon}
-            </div>
-
-            {/* Текст */}
-            <div className="mt-10 text-center">
-              <h3 className="text-xl font-bold text-white mb-4">
-                {feature.title}
-              </h3>
-              <p className="text-white/90 text-sm leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-
-            {/* Декоративный элемент */}
+        {/* Список элементов */}
+        <div className="relative max-w-6xl mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
             <div
-              className="absolute inset-0 rounded-xl bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300"
-              style={{ mixBlendMode: "overlay" }}
-            ></div>
-          </div>
-        ))}
+              key={index}
+              className="relative bg-gradient-to-br from-[hsl(245,70%,55%)] to-[hsl(210,70%,50%)] rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              {/* Иконка */}
+              <div className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-white text-[hsl(245,64%,45%)] rounded-full w-16 h-16 flex items-center justify-center shadow-lg">
+                {feature.icon}
+              </div>
+
+              {/* Текст */}
+              <div className="mt-10 text-center">
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-white/90 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+
+              {/* Декоративный элемент */}
+              <div
+                className="absolute inset-0 rounded-xl bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300"
+                style={{ mixBlendMode: "overlay" }}
+              ></div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
