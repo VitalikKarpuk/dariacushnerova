@@ -1,5 +1,69 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import SectionTitle from "../SectionTitle";
+
+import { Sparkles } from "lucide-react";
+
+export function FunnyCtaLink({
+  link,
+  text,
+  children,
+}: {
+  link: string;
+  children?: ReactNode;
+  text?: string;
+}) {
+  return (
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="
+        relative
+        inline-flex
+        items-center
+        justify-center
+        px-8
+        py-4
+        text-sm
+        md:text-base
+        font-bold
+        text-white
+        rounded-full
+        shadow-xl
+        bg-gradient-to-r
+        from-pink-500
+        via-yellow-300
+        to-blue-400
+        hover:animate-none
+        hover:scale-105
+        transition-transform
+        duration-900
+        focus:outline-none
+        focus:ring-2
+        focus:ring-offset-2
+        focus:ring-pink-300
+      "
+    >
+      {/* Иконка «блёсток» в углу кнопки */}
+      <Sparkles
+        className="
+          absolute
+          -top-3
+          -right-3
+          w-7
+          h-7
+          text-white
+          drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]
+          animate-ping
+        "
+        aria-hidden="true"
+      />
+
+      {/* Текст кнопки */}
+      <span className="relative z-10">{text || children}</span>
+    </a>
+  );
+}
 
 const SectionThree: React.FC = () => {
   return (
@@ -24,13 +88,10 @@ const SectionThree: React.FC = () => {
               <strong className="text-[hsl(245,64%,35%)]">Я ЛИДЕР</strong>, где
               вы реализуете задуманное ⬇️
             </p>
-            <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
-              target="_blank"
-              className="mt-6 px-6 py-3 inline-block bg-[hsl(245,64%,45%)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-[hsl(245,64%,40%)] transition-colors duration-300"
-            >
-              АНКЕТА ПРЕДЗАПИСИ в 7 поток
-            </a>
+            <FunnyCtaLink
+              text="АНКЕТА ПРЕДЗАПИСИ в 7 поток"
+              link="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+            />
             <p className="text-sm text-gray-600 mt-4">
               Она позволит получить <strong>скидку 40%</strong> на участие
             </p>
@@ -57,9 +118,15 @@ const SectionThree: React.FC = () => {
               получаются большие результаты и что нужно, чтобы вы смогли также
               ⬇️
             </p>
-            <button className="mt-6 px-6 py-3 bg-[hsl(210,60%,50%)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-[hsl(210,60%,45%)] transition-colors duration-300">
-              Смотреть видео
-            </button>
+            <div className="max-w-xl mx-auto text-center">
+              <a
+                href="https://youtu.be/HQ0z6Ca4XL8"
+                target="_blank"
+                className="inline-block mt-6 px-6 py-3 bg-[hsl(210,60%,50%)] text-white text-sm font-bold rounded-lg shadow-md hover:bg-[hsl(210,60%,45%)] transition-colors duration-300"
+              >
+                Смотреть видео
+              </a>
+            </div>
           </div>
         </div>
       </div>

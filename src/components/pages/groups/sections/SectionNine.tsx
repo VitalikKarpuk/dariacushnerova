@@ -1,6 +1,7 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
 import { Megaphone } from "lucide-react";
+import { FunnyCtaLink } from "./SectionThree";
 
 const SectionNine: React.FC = () => {
   return (
@@ -94,26 +95,10 @@ const SectionNine: React.FC = () => {
               </p>
 
               {/* CTA-кнопка */}
-              <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
-                target="_blank"
-                className="
-            inline-block
-            px-8
-            py-4
-            text-lg
-            font-bold
-            rounded-full
-            shadow-md
-            bg-[#2667FF]
-            hover:bg-[#3B28CC]
-            hover:shadow-xl
-            transition-all
-            duration-300
-          "
-              >
-                Заполнить анкету
-              </a>
+              <FunnyCtaLink
+                link="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+                text="Заполнить анкету"
+              />
             </div>
           </section>
         </div>
