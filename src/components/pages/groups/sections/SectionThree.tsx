@@ -52,7 +52,7 @@ export function FunnyCtaLink({
           -right-3
           w-7
           h-7
-          text-white
+          text-blue-700
           drop-shadow-[0_0_6px_rgba(255,255,255,0.7)]
           animate-ping
         "
@@ -82,7 +82,7 @@ const SectionThree: React.FC = () => {
         <div className="max-w-3xl mx-auto px-4 md:px-6 space-y-8">
           {/* Первая часть текста */}
           <div className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300">
-            <p className="text-lg text-gray-800 leading-relaxed">
+            <p className="text-lg mb-3 text-gray-800 leading-relaxed">
               Если хотя бы в одном пункте узнали себя, приглашаю вас на обучение
               для экспертов{" "}
               <strong className="text-[hsl(245,64%,35%)]">Я ЛИДЕР</strong>, где
