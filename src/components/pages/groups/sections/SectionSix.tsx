@@ -27,7 +27,7 @@ const SectionSix: React.FC = () => {
         {/* Кнопка-ссылка */}
         <div className="max-w-3xl mx-auto text-center">
           <FunnyCtaLink link="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing">
-            АНКЕТА ПРЕДЗАПИСИ в 7 поток <br />
+            АНКЕТА ПРЕДЗАПИСИ в 8 поток <br />
             <span className="text-sm font-normal">
               Она позволит получить скидку <strong>40%</strong> на участие
             </span>
@@ -37,7 +37,7 @@ const SectionSix: React.FC = () => {
             target="_blank"
             className="inline-block px-8 py-4 text-white font-bold text-lg rounded-full shadow-lg bg-[hsl(245,64%,45%)] hover:bg-[hsl(245,64%,40%)] transition-transform transform hover:scale-105"
           >
-            АНКЕТА ПРЕДЗАПИСИ в 7 поток <br />
+            АНКЕТА ПРЕДЗАПИСИ в 8 поток <br />
             <span className="text-sm font-normal">
               Она позволит получить скидку <strong>40%</strong> на участие
             </span>

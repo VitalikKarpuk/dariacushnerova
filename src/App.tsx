@@ -147,7 +147,7 @@ function App() {
       <div className="container">
         <AnimatedButton>
           <p className="text-white text-2xl font-bold uppercase tracking-wide mb-2">
-            АНКЕТА ПРЕДЗАПИСИ 7 поток
+            АНКЕТА ПРЕДЗАПИСИ 8 поток
           </p>
           <p className="text-white/80 text-base font-normal tracking-tight">
             она позволит получить скидку 20% на участие

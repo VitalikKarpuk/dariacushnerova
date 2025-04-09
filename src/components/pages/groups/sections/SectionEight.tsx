@@ -108,7 +108,7 @@ export function ParticipantsCases() {
 
         {/* Кейс 4 */}
         <a
-          href="https://www.instagram.com/stories/highlights/18046475974452610/"
+          href="https://www.instagram.com/stories/highlights/18025281815118866/"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -128,8 +128,9 @@ export function ParticipantsCases() {
           "
         >
           <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс психолога Лилии</span>
+          <span className="font-semibold">Кейс парфюмера Юлии</span>
         </a>
+        
       </div>
     </section>
   );

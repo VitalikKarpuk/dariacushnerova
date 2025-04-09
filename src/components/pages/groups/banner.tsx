@@ -57,9 +57,15 @@ const Banner: React.FC = () => {
         {/* Дополнительный текст */}
         <p
           className="text-xl md:text-2xl font-light opacity-100 mb-6"
-          aria-label="с Дарьей Кушнеровой"
+          aria-label="с Дарьей Карпук"
         >
-          с Дарьей Кушнеровой
+          с Дарьей Карпук
+        </p>
+        <p
+          className="text-xl md:text-2xl font-light opacity-100 mb-6"
+          aria-label="с Дарьей Карпук"
+        >
+          старт 23 мая
         </p>
       </div>
     </div>

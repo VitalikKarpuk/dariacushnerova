@@ -6,8 +6,8 @@ export function Footer() {
       <div className="max-w-4xl mx-auto text-center">
         {/* Основной текст */}
         <p className="text-sm md:text-base font-light mb-4">
-          © 2020-2024{" "}
-          <span className="text-white font-semibold">darya__kushnerova.psy</span>
+          © 2020-2025{" "}
+          <span className="text-white font-semibold">darya_karpuk.psy</span>
         </p>
         <p className="text-sm md:text-base font-light mb-4">
           Все права защищены
