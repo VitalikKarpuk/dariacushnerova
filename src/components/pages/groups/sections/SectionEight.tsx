@@ -30,7 +30,7 @@ export function ParticipantsCases() {
       </p>
 
       {/* Сетка кейсов */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Кейс 1 */}
         <a
           href="https://www.instagram.com/stories/highlights/17906581703913540/"
@@ -130,7 +130,31 @@ export function ParticipantsCases() {
           <ExternalLink className="w-6 h-6" />
           <span className="font-semibold">Кейс парфюмера Юлии</span>
         </a>
-        
+
+        {/* Кейс 5 */}
+        <a
+          href="https://www.instagram.com/stories/highlights/18158851036318733/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            flex
+            flex-col
+            items-center
+            gap-2
+            bg-white
+            text-[hsl(245,64%,45%)]
+            rounded-lg
+            p-4
+            shadow-md
+            hover:shadow-lg
+            transition-shadow
+            hover:scale-105
+            transform
+          "
+        >
+          <ExternalLink className="w-6 h-6" />
+          <span className="font-semibold">Кейс тренера по созданию семьи Миланы</span>
+        </a>
       </div>
     </section>
   );
