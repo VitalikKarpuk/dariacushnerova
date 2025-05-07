@@ -4,6 +4,13 @@ import { Megaphone } from "lucide-react";
 import { FunnyCtaLink } from "./SectionThree";
 
 const SectionNine: React.FC = () => {
+  // if (true) {
+  //   return (
+  //     <section className="relative py-16 md:py-20 bg-gradient-to-b from-[hsl(210,76%,85%)] to-[hsl(210,60%,97%)]">
+  //       <div className="container">asfsdfbj</div>
+  //     </section>
+  //   );
+  // }
   return (
     <section className="relative py-16 md:py-20 bg-gradient-to-b from-[hsl(210,76%,85%)] to-[hsl(210,60%,97%)]">
       <div className="container">
@@ -43,7 +50,6 @@ const SectionNine: React.FC = () => {
 
           {/* Правый блок - стоимость и кнопка */}
           <section className="relative max-w-2xl mx-auto h-full">
-            {/* Основной контейнер с градиентным фоном */}
             <div
               className="
           relative
@@ -59,40 +65,37 @@ const SectionNine: React.FC = () => {
           h-full
         "
             >
-              {/* Фоновые круги для визуальной динамики */}
               <div className="absolute -top-10 -left-10 w-32 h-32 rounded-full bg-[#2667FF] blur-3xl opacity-40 -z-10" />
               <div className="absolute bottom-0 right-0 w-24 h-24 rounded-full bg-[#3B28CC] blur-2xl opacity-40 -z-10" />
 
-              {/* Sale лейбл */}
-              <div className="flex items-center gap-2 bg-[#FFB347] text-[#752E00] font-semibold px-3 py-1 rounded-full shadow-md w-max animate-bounce uppercase">
+              {/* <div className="flex items-center gap-2 bg-[#FFB347] text-[#752E00] font-semibold px-3 py-1 rounded-full shadow-md w-max animate-bounce uppercase">
                 <Megaphone className="w-5 h-5" />
                 Sale
               </div>
-              <div>Старт 23 мая</div>
+              <div>Старт 23 мая</div> */}
 
-              {/* Заголовок */}
-              <h2 className="mt-4 text-2xl md:text-3xl font-extrabold drop-shadow-lg">
+              {/* <h2 className="mt-4 text-2xl md:text-3xl font-extrabold drop-shadow-lg">
                 Раннее бронирование
               </h2>
 
-              {/* Секция цены */}
               <div className="mt-3 mb-6 flex flex-col sm:flex-row items-center gap-3">
-                {/* Старая цена */}
                 <span className="text-lg line-through text-white/80 opacity-80">
                   $1200
                 </span>
-                {/* Новая цена */}
                 <span className="text-4xl sm:text-5xl font-normal text-[#1A202C] bg-white px-3 py-1 rounded-md shadow-md drop-shadow-md">
                   $650
                 </span>
-              </div>
+              </div> */}
 
-              {/* Информация о рассрочке */}
-              <p className="text-sm md:text-base italic mb-2 drop-shadow-sm">
+              {/* <p className="text-sm md:text-base italic mb-2 drop-shadow-sm">
                 ‼️ Действует беспроцентная рассрочка на 4-6 месяцев
               </p>
               <p className="text-sm md:text-base mb-6 drop-shadow-sm">
                 Начинайте обучение, а платите уже в процессе
+              </p> */}
+              <p className="text-2xl font-bold text-[hsl(245,64%,35%)] mb-6">
+                Чтобы получить максимально выгодные условия для участия и первым
+                узнать о старте продаж, заполните анкету.{" "}
               </p>
 
               {/* CTA-кнопка */}
