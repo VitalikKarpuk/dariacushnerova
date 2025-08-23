@@ -72,7 +72,7 @@ const SectionNine: React.FC = () => {
                 <Megaphone className="w-5 h-5" />
                 Sale
               </div>
-              <div>Старт 23 мая</div> */}
+              <div>старт 17 октября</div> */}
 
               {/* <h2 className="mt-4 text-2xl md:text-3xl font-extrabold drop-shadow-lg">
                 Раннее бронирование

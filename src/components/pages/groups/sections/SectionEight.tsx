@@ -33,7 +33,7 @@ export function ParticipantsCases() {
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Кейс 1 */}
         <a
-          href="https://www.instagram.com/stories/highlights/17906581703913540/"
+          href="https://www.instagram.com/stories/highlights/18064679738091622/"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -53,12 +53,12 @@ export function ParticipantsCases() {
           "
         >
           <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс нутрициолога Надежды</span>
+          <span className="font-semibold">Кейс массажиста Людмилы</span>
         </a>
 
         {/* Кейс 2 */}
         <a
-          href="https://www.instagram.com/stories/highlights/18007484374974768/"
+          href="https://www.instagram.com/stories/highlights/18100495129531605/"
           target="_blank"
           rel="noopener noreferrer"
           className="
@@ -78,7 +78,7 @@ export function ParticipantsCases() {
           "
         >
           <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс косметолога Ирины</span>
+          <span className="font-semibold">Кейс аквагрим Татьна</span>
         </a>
 
         {/* Кейс 3 */}
