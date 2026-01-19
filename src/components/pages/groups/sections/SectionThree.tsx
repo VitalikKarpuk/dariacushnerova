@@ -89,7 +89,7 @@ const SectionThree: React.FC = () => {
               вы реализуете задуманное ⬇️
             </p>
             <FunnyCtaLink
-              text="АНКЕТА ПРЕДЗАПИСИ в 8 поток"
+              text="АНКЕТА ПРЕДЗАПИСИ в 10 поток"
               link="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
             />
             <p className="text-sm text-gray-600 mt-4">

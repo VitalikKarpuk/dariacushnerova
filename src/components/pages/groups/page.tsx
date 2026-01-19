@@ -43,6 +43,7 @@ const GroupsPage = () => {
         <SectionThree />
         <SectionFour />
         <SectionFive />
+        
         <SectionSix />
         <SectionSeven />
         <SectionEight />

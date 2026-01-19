@@ -1,5 +1,6 @@
 import React from "react";
 import SectionTitle from "../SectionTitle";
+import { Gift } from "lucide-react";
 
 const SectionFive: React.FC = () => {
   return (
@@ -51,6 +52,38 @@ const SectionFive: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Подарок для участников */}
+        <div className="relative max-w-4xl mx-auto mt-16 px-4">
+          <div className="relative bg-gradient-to-r from-[hsl(245,70%,55%)] to-[hsl(280,70%,55%)] rounded-2xl p-8 md:p-10 shadow-2xl overflow-hidden">
+            {/* Декоративные элементы */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+            
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
+              {/* Иконка подарка */}
+              <div className="flex-shrink-0 bg-white/20 backdrop-blur-sm rounded-full p-5 shadow-lg">
+                <Gift size={48} className="text-white drop-shadow-lg" />
+              </div>
+              
+              {/* Текст */}
+              <div>
+                <p className="text-white/80 text-sm uppercase tracking-wider mb-2 font-medium">
+                  Эксклюзивный бонус
+                </p>
+                <h3 className="text-white text-xl md:text-2xl font-bold leading-snug">
+                  Только участникам этого потока в подарок —{" "}
+                  <span className="text-yellow-300">
+                    доступ к интенсиву «Секреты успешных сторис»
+                  </span>
+                </h3>
+              </div>
+            </div>
+
+            {/* Свечение */}
+            <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/5 to-transparent pointer-events-none"></div>
+          </div>
         </div>
 
         {/* Анимация фона */}

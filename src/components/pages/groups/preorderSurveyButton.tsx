@@ -27,7 +27,7 @@ export function PreorderSurveyButton() {
           animate-pulse
         "
       >
-        АНКЕТА ПРЕДЗАПИСИ в 8 поток
+        АНКЕТА ПРЕДЗАПИСИ в 10 поток
         <span className="block text-sm md:text-base font-normal mt-1">
           Она позволит получить скидку 40% на участие
         </span>

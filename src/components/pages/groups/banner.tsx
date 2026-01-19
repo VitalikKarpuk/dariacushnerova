@@ -65,7 +65,7 @@ const Banner: React.FC = () => {
           className="text-xl md:text-2xl font-light opacity-100 mb-6"
           aria-label="с Дарьей Карпук"
         >
-          старт 17 октября
+          старт 19 февраля
         </p>
       </div>
     </div>
