@@ -1,18 +1,6 @@
 const SectionHeader = ({ title }: { title: string }) => {
   return (
-    <h2
-      className="
-  text-4xl md:text-5xl 
-  font-extrabold 
-  text-center 
-  mb-8
-  text-transparent bg-clip-text
-  bg-gradient-to-r
-  from-[#3F8EFC] 
-  to-[#2667FF]
-  pb-2
-"
-    >
+    <h2 className="font-heading text-2xl font-bold text-center mb-6 pb-2 text-gradient-brand tracking-tight md:text-3xl md:mb-8 lg:text-4xl">
       {title}
     </h2>
   );

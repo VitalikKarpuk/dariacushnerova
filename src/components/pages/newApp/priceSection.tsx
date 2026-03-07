@@ -1,5 +1,3 @@
-import { Button, ButtonJs } from "my-app-vitali-test";
-
 const PriceSection = () => {
   const plans = [
     {

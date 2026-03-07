@@ -1,8 +1,8 @@
 import { FC } from "react";
-import { Header } from "../header";
 import { MainBanner } from "../mainBanner";
 import { ProgramSection } from "./programSection";
 import { ScrollInfinite } from "../atoms/scrollInfinite";
+
 const list: string[] = [
   "1 коуч-сессия длительностью 1,30 часа",
   "проходит онлайн на платформе Zoom",
@@ -17,13 +17,12 @@ const list: string[] = [
 const Programs: FC = () => {
   return (
     <>
-      <Header />
       <MainBanner />
       <ScrollInfinite />
       <div>
-        <div className="container font-[Roboto] my-10 flex flex-col gap-6">
+        <div className="container my-10 flex flex-col gap-6 font-sans">
           <ProgramSection price={50} list={list} />
-          <ProgramSection price={50} list={list} isReverse/>
+          <ProgramSection price={50} list={list} isReverse />
         </div>
       </div>
     </>

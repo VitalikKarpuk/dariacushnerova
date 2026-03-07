@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { useState } from "react";
 import { SectionHeader } from "./atoms/sectionHeader";
 import { AnimatedButton } from "./atoms/animatedButton";
 import { BookOpen, Star, Rocket, Briefcase } from "lucide-react";
@@ -69,7 +68,7 @@ export function FullTextAccordion() {
      {modules.map((module, index) => (
        <div
          key={index}
-         className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+         className="bg-surface rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
        >
          {/* Иконка и заголовок */}
          <div className="flex items-center gap-4 mb-4">

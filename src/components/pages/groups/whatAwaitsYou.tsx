@@ -1,4 +1,3 @@
-import React from "react";
 import {
   BookOpen,
   Users,
@@ -11,43 +10,44 @@ import {
   Target,
 } from "lucide-react";
 import { SectionHeader } from "./atoms/sectionHeader";
+import { DURATION_LABEL, INDIVIDUAL_MEETINGS } from "../../../config/course";
 
 export function WhatAwaitsYou() {
   const items = [
     {
-      icon: <BookOpen className="w-6 h-6 text-[#ffffff]" />,
-      text: "7 недель обучения",
+      icon: <BookOpen className="w-6 h-6 text-content-inverse" />,
+      text: `${DURATION_LABEL} обучения`,
     },
     {
-      icon: <Users className="w-6 h-6 text-[#ffffff]" />,
-      text: "5 индивидуальных встреч со мной и бизнес-психологом моей команды",
+      icon: <Users className="w-6 h-6 text-content-inverse" />,
+      text: `${INDIVIDUAL_MEETINGS} индивидуальных встреч со мной и бизнес-психологом моей команды`,
     },
     {
-      icon: <DollarSign className="w-6 h-6 text-[#ffffff]" />,
+      icon: <DollarSign className="w-6 h-6 text-content-inverse" />,
       text: "Финансовая расстановка",
     },
     {
-      icon: <Dice3 className="w-6 h-6 text-[#ffffff]" />,
+      icon: <Dice3 className="w-6 h-6 text-content-inverse" />,
       text: "Трансформационная игра",
     },
     {
-      icon: <Edit className="w-6 h-6 text-[#ffffff]" />,
+      icon: <Edit className="w-6 h-6 text-content-inverse" />,
       text: "Домашние задания с обратной связью",
     },
     {
-      icon: <MessageCircle className="w-6 h-6 text-[#ffffff]" />,
+      icon: <MessageCircle className="w-6 h-6 text-content-inverse" />,
       text: "Чат поддержки и общения",
     },
     {
-      icon: <Handshake className="w-6 h-6 text-[#ffffff]" />,
+      icon: <Handshake className="w-6 h-6 text-content-inverse" />,
       text: "Коллаборации с другими участниками и совместные проекты",
     },
     {
-      icon: <UserPlus className="w-6 h-6 text-[#ffffff]" />,
+      icon: <UserPlus className="w-6 h-6 text-content-inverse" />,
       text: "Новые клиенты, которых вы можете приобрести в группе",
     },
     {
-      icon: <Target className="w-6 h-6 text-[#ffffff]" />,
+      icon: <Target className="w-6 h-6 text-content-inverse" />,
       text: "Полное погружение в вашу проблематику и помощь в решении задач, пока вы не достигните цели",
     },
   ];
@@ -76,7 +76,7 @@ export function WhatAwaitsYou() {
             top-0 
             h-full 
             border-l-4 
-            border-[#2667FF]/30
+            border-brand/30
           "
           />
 
@@ -103,7 +103,7 @@ export function WhatAwaitsYou() {
                   flex 
                   items-center 
                   justify-center 
-                  bg-[#3B28CC]
+                  bg-brand-muted
                   rounded-full
                   shadow-lg
                   group-hover:scale-105
@@ -121,9 +121,9 @@ export function WhatAwaitsYou() {
                     text-xl
                     md:text-2xl
                     font-bold
-                    text-[#2667FF]
+                    text-brand
                     mb-2
-                    group-hover:text-[#3F8EFC]
+                    group-hover:text-brand-hover
                     transition-colors
                     duration-300
                   "

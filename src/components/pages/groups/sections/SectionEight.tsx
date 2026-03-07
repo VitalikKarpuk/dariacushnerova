@@ -1,202 +1,142 @@
-import React from "react";
+import { type FC } from "react";
 import SectionTitle from "../SectionTitle";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { CtaButton } from "../../../atoms/CtaButton";
+import { SectionDecor } from "../atoms/SectionDecor";
+import { WireframeGrid } from "../atoms/WireframeGrid";
+import {
+  FORM_URL,
+  CTA_BOOK_DISCOUNT,
+  DISCOUNT_PERCENT,
+  DURATION_LABEL,
+  COURSE_NAME,
+  INSTAGRAM_CASES,
+} from "../../../../config/course";
 
-import { ExternalLink } from "lucide-react";
-import { FunnyCtaLink } from "./SectionThree";
+const caseLinks = INSTAGRAM_CASES;
 
-export function ParticipantsCases() {
+const avatarGradients = [
+  "from-warm-500 to-warm-600",
+  "from-teal-400 to-teal-500",
+  "from-rose-400 to-rose-500",
+  "from-warm-400 to-warm-500",
+  "from-teal-500 to-teal-400",
+] as const;
+
+const getInitial = (label: string): string => {
+  const match = label.match(/(?:Людмилы|Татьна|Виктории|Юлии|Миланы)/);
+  if (match) return match[0][0];
+  return label[0];
+};
+
+const SectionEight: FC = () => {
   return (
-    <section
-      className="
-        bg-gradient-to-r
-        from-[hsl(245,64%,55%)]
-        to-[hsl(210,70%,50%)]
-        text-white
-        rounded-lg
-        shadow-lg
-        p-8
-        max-w-5xl
-        mx-auto
-        text-center
-      "
-    >
-      <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
-        Кейсы участников
-      </h3>
-
-      <p className="text-lg mb-6">
-        Здесь вы можете просмотреть кейсы реальных участников и убедиться, что
-        выйти на х3 в доходе за 7 недель реально!
-      </p>
-
-      {/* Сетка кейсов */}
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {/* Кейс 1 */}
-        <a
-          href="https://www.instagram.com/stories/highlights/18064679738091622/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            flex-col
-            items-center
-            gap-2
-            bg-white
-            text-[hsl(245,64%,45%)]
-            rounded-lg
-            p-4
-            shadow-md
-            hover:shadow-lg
-            transition-shadow
-            hover:scale-105
-            transform
-          "
-        >
-          <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс массажиста Людмилы</span>
-        </a>
-
-        {/* Кейс 2 */}
-        <a
-          href="https://www.instagram.com/stories/highlights/18100495129531605/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            flex-col
-            items-center
-            gap-2
-            bg-white
-            text-[hsl(245,64%,45%)]
-            rounded-lg
-            p-4
-            shadow-md
-            hover:shadow-lg
-            transition-shadow
-            hover:scale-105
-            transform
-          "
-        >
-          <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс аквагрим Татьна</span>
-        </a>
-
-        {/* Кейс 3 */}
-        <a
-          href="https://www.instagram.com/stories/highlights/18012491281572009/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            flex-col
-            items-center
-            gap-2
-            bg-white
-            text-[hsl(245,64%,45%)]
-            rounded-lg
-            p-4
-            shadow-md
-            hover:shadow-lg
-            transition-shadow
-            hover:scale-105
-            transform
-          "
-        >
-          <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс кондитера Виктории</span>
-        </a>
-
-        {/* Кейс 4 */}
-        <a
-          href="https://www.instagram.com/stories/highlights/18025281815118866/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            flex-col
-            items-center
-            gap-2
-            bg-white
-            text-[hsl(245,64%,45%)]
-            rounded-lg
-            p-4
-            shadow-md
-            hover:shadow-lg
-            transition-shadow
-            hover:scale-105
-            transform
-          "
-        >
-          <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс парфюмера Юлии</span>
-        </a>
-
-        {/* Кейс 5 */}
-        <a
-          href="https://www.instagram.com/stories/highlights/18158851036318733/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="
-            flex
-            flex-col
-            items-center
-            gap-2
-            bg-white
-            text-[hsl(245,64%,45%)]
-            rounded-lg
-            p-4
-            shadow-md
-            hover:shadow-lg
-            transition-shadow
-            hover:scale-105
-            transform
-          "
-        >
-          <ExternalLink className="w-6 h-6" />
-          <span className="font-semibold">Кейс тренера по созданию семьи Миланы</span>
-        </a>
-      </div>
-    </section>
-  );
-}
-
-const SectionEight: React.FC = () => {
-  return (
-    <section
-      className="relative py-16 md:py-20"
-      style={{
-        background:
-          "linear-gradient(to bottom, hsl(220, 70%, 96%), hsl(220, 70%, 90%))",
-      }}
-    >
-      <div className="container">
-        {/* Заголовок секции */}
-        <div className="max-w-4xl mx-auto text-center mb-12">
+    <section className="relative overflow-hidden py-10 md:py-14 bg-palette-100" aria-labelledby="section-eight-heading">
+      {/* Мягкое свечение по центру */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(167, 139, 250, 0.14) 0%, rgba(196, 181, 253, 0.05) 50%, transparent 70%)",
+        }}
+        aria-hidden
+      />
+      <WireframeGrid className="opacity-15" />
+      <SectionDecor variant="dense" />
+      <div className="container relative">
+        <header className="max-w-4xl mx-auto text-center mb-8">
           <SectionTitle
             title="Аналогов обучения на Белорусском рынке нету!"
-            color="hsl(245,64%,35%)"
+            color="#f0eef6"
             align="center"
           />
-          <p className="text-gray-700 text-lg mt-4">
-            Я ЛИДЕР - первый онлайн-курс, где 7 недель вы работаете с командой
-            специалистов в психологии и бизнесе.
+          <p id="section-eight-heading" className="sr-only">
+            Уникальность программы и запись на обучение
           </p>
-          <p className="text-gray-700 text-lg mt-2">
-            Получая стабильные результаты: финансы, проекты, сотрудничества,
-            выступления.
-          </p>
+        </header>
+
+        {/* Главная карточка: градиентная обводка + светлая поверхность */}
+        <div className="mx-auto max-w-4xl rounded-2xl p-[2px] bg-gradient-to-br from-warm-500 via-palette-600 to-teal-500 shadow-[0_0_0_1px_rgba(245,158,11,0.3),0_16px_48px_-12px_rgba(0,0,0,0.25),0_0_48px_-12px_rgba(245,158,11,0.2)]">
+          <div className="relative overflow-hidden rounded-[calc(1rem-2px)] bg-palette-200/70 backdrop-blur-xl">
+            <div
+              className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-palette-400/60 to-transparent"
+              aria-hidden
+            />
+            <div className="grid gap-0 md:grid-cols-[1fr,auto]">
+              <div className="flex flex-col justify-center px-6 py-6 md:px-8 md:py-8">
+                <p className="font-sans text-base text-palette-800 font-medium md:text-lg leading-relaxed">
+                  <strong className="text-white">{COURSE_NAME}</strong> — первый онлайн-курс, где {DURATION_LABEL} вы работаете с командой
+                  специалистов в психологии и бизнесе.
+                </p>
+                <p className="font-sans mt-3 text-base text-palette-700 md:text-lg leading-relaxed">
+                  Получая стабильные результаты: финансы, проекты, сотрудничества,
+                  выступления.
+                </p>
+              </div>
+              <div className="flex flex-col items-center justify-center gap-4 border-t border-palette-500/25 bg-palette-600/8 px-6 py-6 md:border-t-0 md:border-l md:border-l-palette-500/25 md:px-8 md:py-8">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-warm-500 to-warm-400 px-5 py-2.5 text-lg font-black text-palette-100 shadow-[0_0_28px_rgba(245,158,11,0.55)] ring-2 ring-warm-200/35 ring-offset-2 ring-offset-palette-200/80">
+                  −{DISCOUNT_PERCENT}%
+                </span>
+                <CtaButton
+                  href={FORM_URL}
+                  className="shadow-[0_0_20px_-4px_rgba(167,139,250,0.4)]"
+                >
+                  {CTA_BOOK_DISCOUNT}
+                </CtaButton>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Кнопка действия */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <FunnyCtaLink
-            link="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
-            text="Забронировать место на обучение с 40% скидкой"
+        {/* Групповое фото выпускников */}
+        <div className="mx-auto mt-10 max-w-5xl overflow-hidden rounded-2xl border border-palette-500/30 shadow-[0_0_0_1px_rgba(167,139,250,0.15),0_12px_40px_-12px_rgba(0,0,0,0.25)]">
+          <img
+            src="/assets/images/IMG_8643.JPG"
+            alt="Выпускники программы Я ЛИДЕР"
+            className="w-full object-cover max-h-[340px] md:max-h-[400px] object-top"
           />
         </div>
 
         {/* Кейсы участников */}
-        <ParticipantsCases />
+        <div className="mt-10 md:mt-12">
+          <div className="flex flex-col items-center gap-2 mb-6 text-center">
+            <h3 id="cases-heading" className="font-heading text-xl font-bold text-white md:text-2xl flex items-center gap-2">
+              <Sparkles className="h-5 w-5 text-warm-400" aria-hidden />
+              Кейсы участников
+            </h3>
+            <p className="font-sans max-w-2xl text-sm text-palette-700 font-medium md:text-base">
+              Здесь вы можете просмотреть кейсы реальных участников и убедиться, что
+              выйти на х3 в доходе за {DURATION_LABEL} реально!
+            </p>
+          </div>
+
+          <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {caseLinks.map(({ href, label }, index) => (
+              <li key={label}>
+                <a
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group relative flex items-center gap-3 rounded-xl border border-palette-500/35 bg-palette-200/70 p-4 backdrop-blur-xl transition-all duration-300 hover:-translate-y-0.5 hover:border-palette-500/55 hover:shadow-[0_0_0_1px_rgba(196,181,253,0.3),0_16px_40px_-12px_rgba(0,0,0,0.2),0_0_32px_-8px_rgba(167,139,250,0.3)]"
+                  style={{
+                    boxShadow: "0 0 0 1px rgba(167, 139, 250, 0.12), 0 8px 24px -8px rgba(0, 0, 0, 0.15)",
+                  }}
+                >
+                  <div
+                    className="absolute left-0 right-0 top-0 h-px rounded-t-xl bg-gradient-to-r from-transparent via-palette-400/40 to-transparent pointer-events-none"
+                    aria-hidden
+                  />
+                  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${avatarGradients[index]} text-sm font-bold text-white shadow-[0_0_16px_-4px_rgba(167,139,250,0.45)] ring-2 ring-white/20 transition-transform duration-300 group-hover:scale-105`}>
+                    {getInitial(label)}
+                  </span>
+                  <span className="min-w-0 flex-1 text-left text-sm font-semibold text-palette-800 transition-colors group-hover:text-white">
+                    {label}
+                  </span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-palette-500/70 transition-all duration-300 group-hover:translate-x-1 group-hover:text-palette-500" aria-hidden />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );

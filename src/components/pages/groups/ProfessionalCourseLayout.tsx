@@ -1,7 +1,7 @@
-import React from "react";
 import { CheckCircle, Briefcase, Star, Rocket } from "lucide-react";
 import { SectionHeader } from "./atoms/sectionHeader";
 import { AnimatedButton } from "./atoms/animatedButton";
+import { COURSE_NAME, DURATION_LABEL } from "../../../config/course";
 
 export function ProfessionalCourseLayout() {
   return (
@@ -9,9 +9,9 @@ export function ProfessionalCourseLayout() {
       <div className="max-w-6xl mx-auto">
         {/* Заголовок */}
         <div className="text-center mb-12">
-          <SectionHeader title="Я ЛИДЕР" />
+          <SectionHeader title={COURSE_NAME} />
           <p className="text-lg md:text-xl font-light text-gray-700">
-            Первый онлайн-курс, где 7 недель вы работаете с командой
+            Первый онлайн-курс, где {DURATION_LABEL} вы работаете с командой
             специалистов в психологии и бизнесе. Получая стабильные результаты:
             финансы, проекты, сотрудничества, выступления.
           </p>
@@ -22,7 +22,7 @@ export function ProfessionalCourseLayout() {
           {[
             {
               icon: <CheckCircle className="w-10 h-10 text-blue-600" />,
-              text: "Гарантированные результаты за 7 недель",
+              text: `Гарантированные результаты за ${DURATION_LABEL}`,
             },
             {
               icon: <Briefcase className="w-10 h-10 text-indigo-600" />,
@@ -39,7 +39,7 @@ export function ProfessionalCourseLayout() {
           ].map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-4 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+              className="flex items-center gap-4 bg-surface rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
               <div>{item.icon}</div>
               <p className="text-gray-700 text-lg font-medium">{item.text}</p>
@@ -53,7 +53,7 @@ export function ProfessionalCourseLayout() {
 
           <p className="text-lg text-gray-700 font-light text-center mb-8">
             Здесь вы можете просмотреть кейсы реальных участников и убедиться,
-            что выйти на х3 в доходе за 7 недель реально!
+            что выйти на х3 в доходе за {DURATION_LABEL} реально!
           </p>
           <div className="text-center">
             <AnimatedButton text="Посмотреть кейсы" />

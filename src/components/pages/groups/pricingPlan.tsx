@@ -1,5 +1,4 @@
-import React from "react";
-import { CheckCircle, Sparkles, Trophy } from "lucide-react";
+import { CheckCircle, Sparkles } from "lucide-react";
 import { AnimatedButton } from "./atoms/animatedButton";
 
 export function PricingPlan() {

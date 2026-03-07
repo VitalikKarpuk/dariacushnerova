@@ -3,6 +3,7 @@ import { Star, Rocket } from "lucide-react";
 import { PreorderSurveyButton } from "./preorderSurveyButton";
 import { SectionHeader } from "./atoms/sectionHeader";
 import { SectionText } from "./atoms/sectionText";
+import { DURATION_LABEL } from "../../../config/course";
 
 interface TransformationItem {
   text: string;
@@ -45,7 +46,7 @@ export function SevenWeeksTransformation() {
           <SectionHeader title="Каждый этап обучения четко продуман, каждое действие ведет к результату" />
 
           <p className="text-xl md:text-2xl text-gray-700 font-light">
-            7 недель трансформаций для того, чтобы:
+            {DURATION_LABEL} трансформаций для того, чтобы:
           </p>
         </div>
 
@@ -54,7 +55,7 @@ export function SevenWeeksTransformation() {
           {transformations.map((item, idx) => (
             <li
               key={idx}
-              className="bg-white rounded-xl shadow-md p-6 flex items-start gap-4 hover:shadow-lg transition-shadow"
+              className="bg-surface rounded-xl shadow-md p-6 flex items-start gap-4 hover:shadow-lg transition-shadow"
             >
               <div className="mt-1">{item.icon}</div>
               <p className="text-lg text-gray-800 leading-snug">{item.text}</p>

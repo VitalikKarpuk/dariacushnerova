@@ -1,4 +1,3 @@
-import React from "react";
 import { ExternalLink } from "lucide-react"; // Иконка, при желании
 
 
@@ -11,7 +10,7 @@ export function VideoTeaser() {
         max-w-4xl
         my-10 
         p-6 
-        bg-white 
+        bg-surface 
         rounded-lg 
         shadow-md 
         text-gray-800
@@ -37,7 +36,7 @@ export function VideoTeaser() {
             rounded-full 
             font-semibold
             text-white
-            bg-gradient-to-r from-[#2667FF] to-[#3B28CC]
+            bg-brand
             hover:scale-105 
             hover:shadow-lg 
             transition-transform 

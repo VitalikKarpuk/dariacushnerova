@@ -1,6 +1,6 @@
-import React from "react";
 import { SectionHeader } from "./atoms/sectionHeader";
 import { SectionText } from "./atoms/sectionText";
+import { FORM_URL, DURATION_LABEL } from "../../../config/course";
 
 export function RealCasesSection() {
   return (
@@ -13,14 +13,14 @@ export function RealCasesSection() {
         {/* Описание */}
         <SectionText>
           Здесь вы можете просмотреть кейсы реальных участников и убедиться, что
-          выйти на <span className="font-bold">х3 в доходе</span> за 7 недель
+          выйти на <span className="font-bold">х3 в доходе</span> за {DURATION_LABEL}
           реально!
         </SectionText>
 
         {/* CTA */}
         <div className="w-full max-w-2xl mx-auto">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+            href={FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="

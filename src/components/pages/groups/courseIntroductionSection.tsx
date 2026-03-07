@@ -1,6 +1,5 @@
-import React from "react";
-import { SectionHeader } from "./atoms/sectionHeader";
 import { SectionText } from "./atoms/sectionText";
+import { FORM_URL, COURSE_NAME, DURATION_LABEL, CTA_BOOK_DISCOUNT } from "../../../config/course";
 
 export function CourseIntroductionSection() {
   return (
@@ -11,37 +10,24 @@ export function CourseIntroductionSection() {
         {/* Подзаголовок */}
 
         <SectionText>
-        <span
-            className="
-            relative
-            font-extrabold
-            text-[#2667FF]
-            bg-white
-            px-2
-            py-1
-            rounded
-            inline-block
-            shadow-sm
-            drop-shadow-[0_0_6px_#2667FF]
-          "
-          >
-            Я ЛИДЕР
-          </span> - первый онлайн-курс, где 7 недель вы работаете с командой
-          специалистов в <span className="text-[#3B28CC]">психологии</span> и{" "}
-          <span className="text-[#2667FF]">бизнесе</span>.
+        <span className="relative inline-block rounded bg-surface px-2 py-1 font-extrabold text-brand shadow-sm drop-shadow-[0_0_6px_hsl(var(--color-brand)/0.4)]">
+            {COURSE_NAME}
+          </span> - первый онлайн-курс, где {DURATION_LABEL} вы работаете с командой
+          специалистов в <span className="text-brand-muted">психологии</span> и{" "}
+          <span className="text-brand">бизнесе</span>.
         </SectionText>
         <SectionText>
           Получая стабильные результаты:{" "}
-          <span className="font-bold text-[#1E40AF]">финансы</span>,{" "}
-          <span className="font-bold text-[#1D4ED8]">проекты</span>,{" "}
-          <span className="font-bold text-[#2563EB]">сотрудничества</span>,{" "}
-          <span className="font-bold text-[#3B82F6]">выступления</span>.
+          <span className="font-bold text-brand">финансы</span>,{" "}
+          <span className="font-bold text-section3">проекты</span>,{" "}
+          <span className="font-bold text-brand">сотрудничества</span>,{" "}
+          <span className="font-bold text-section3">выступления</span>.
         </SectionText>
 
         {/* Call-to-Action (CTA) */}
         <div className="w-full max-w-2xl mx-auto">
           <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSfHR3ux5r_w8wioGZPSX-timJ9i9sAoceCy6CGscDVF9Fklqw/viewform?usp=sharing"
+            href={FORM_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="
@@ -51,20 +37,20 @@ export function CourseIntroductionSection() {
           px-6
           rounded-full
           font-bold
-          text-white
+          text-content-inverse
           text-lg
           md:text-xl
           text-center
-          bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600
-          shadow-lg
-          hover:scale-105
-          hover:shadow-xl
-          transition-transform
-          duration-900
-          animate-pulse
+          bg-brand
+          shadow-card
+          hover:bg-brand-hover
+          hover:shadow-card-hover
+          transition-all
+          duration-200
+          text-content-inverse
         "
           >
-            Забронировать место на обучение с 40% скидкой
+            {CTA_BOOK_DISCOUNT}
           </a>
         </div>
       </div>

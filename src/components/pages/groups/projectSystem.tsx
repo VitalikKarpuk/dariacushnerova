@@ -1,5 +1,3 @@
-import React from "react"
-
 export function ProjectSystem() {
   return (
     <section
@@ -7,7 +5,7 @@ export function ProjectSystem() {
         relative
         max-w-4xl
         mx-auto
-        bg-white
+        bg-surface
         rounded-md
         shadow-md
         p-8
@@ -31,7 +29,7 @@ export function ProjectSystem() {
         <span 
           className="
             italic
-            text-[#2667FF]
+            text-brand
           "
         >
           Я ЛИДЕР
@@ -42,7 +40,7 @@ export function ProjectSystem() {
             uppercase
             tracking-wide
             font-semibold
-            text-[#3B28CC]
+            text-brand-muted
           "
         >
           СИСТЕМА
@@ -79,7 +77,7 @@ export function ProjectSystem() {
           className="
             font-semibold 
             italic 
-            text-[#2667FF]
+            text-brand
           "
         >
           постоянного масштабирования

@@ -4,94 +4,339 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design system — палитра #02010a, #04052e, #140152, #22007c, #0d00a4
+   + тёплые акценты: amber, rose, teal */
+:root {
+  /* Тёмная гамма — фон и бренд */
+  --color-dark: 260 67% 2%;
+  --color-brand: 238 84% 10%;
+  --color-brand-hover: 258 98% 16%;
+  --color-brand-light: 263 70% 95%;
+  --color-brand-muted: 262 100% 24%;
+
+  /* Акцент — светлый фиолетовый на тёмном */
+  --color-accent: 263 70% 75%;
+  --color-accent-hover: 246 100% 40%;
+  --color-accent-muted: 263 70% 92%;
+
+  /* НОВЫЕ тёплые акценты */
+  --color-warm: 38 92% 50%;
+  --color-warm-hover: 38 92% 58%;
+  --color-warm-light: 45 93% 58%;
+  --color-warm-muted: 38 80% 85%;
+
+  --color-rose: 330 81% 60%;
+  --color-rose-hover: 330 81% 68%;
+  --color-rose-light: 330 65% 80%;
+
+  --color-teal: 168 76% 50%;
+  --color-teal-hover: 168 76% 58%;
+  --color-teal-light: 168 50% 75%;
+
+  /* Surfaces — тёмные оттенки палитры */
+  --color-surface: 238 84% 12%;
+  --color-surface-alt: 258 98% 18%;
+  --color-surface-subtle: 262 100% 22%;
+
+  /* Text — ярче и контрастнее */
+  --color-text: 260 30% 94%;
+  --color-text-muted: 263 30% 72%;
+  --color-text-inverse: 260 20% 97%;
+  --color-text-heading: 260 50% 97%;
+
+  /* UI */
+  --color-border: 262 100% 24%;
+  --radius-card: 0.75rem;
+  --radius-button: 0.625rem;
+  --radius-button-lg: 0.875rem;
+  --radius-card-lg: 1rem;
+  --shadow-card: 0 1px 3px #02010a40;
+  --shadow-card-hover: 0 8px 24px -4px #1401524d;
+  --shadow-button: 0 2px 8px -2px #22007c4d;
+  --shadow-button-hover: 0 6px 20px -4px #0d00a466;
+  --shadow-warm: 0 4px 16px -2px rgba(245, 158, 11, 0.35);
+  --shadow-warm-hover: 0 8px 24px -4px rgba(245, 158, 11, 0.45);
+  /* Акцентные карточки — градиент по новой палитре */
+  --gradient-brand-card: linear-gradient(155deg, #02010a 0%, #140152 50%, #0d00a4 100%);
+  --shadow-brand-card: 0 12px 32px -4px #14015259;
+
+  /* Фоны секций — чередование тёплых и холодных */
+  --section-bg-blue: 246 100% 18%;
+  --section-bg-navy: 258 98% 14%;
+  --section-bg-gold: 262 100% 20%;
+  --section-bg-teal: 238 84% 14%;
+  --section-bg-orange: 262 100% 22%;
+
+  /* Секции для утилит */
+  --color-section1: #140152;
+  --color-section2: #22007c;
+  --color-section3: #a78bfa;
+
+  /* Hero */
+  --color-hero-bg-start: 260 67% 4%;
+  --color-hero-bg-end: 258 98% 12%;
+  --color-hero-text: 263 70% 92%;
+  --color-hero-text-strong: 263 70% 98%;
+  --color-hero-line: 262 100% 30%;
+
+  /* Typography */
+  --font-heading: "DM Sans", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+/* Плавный скролл и отступ под фиксированный хедер */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 5.5rem;
+  }
+}
 
 #root {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #E3F2FD;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #02010a;
 }
 
 @layer base {
-  :root {
-    --font-sans: "DelaGothicOne";
-    --main-bg: 216, 25%, 96%;
-    --white: 0 0% 100% 1;
-    --black: 0 0% 0%;
-    --warning: 31 100% 56%;
-    --primary: 259 100% 56%; /*  #6921FF */
-    --secondary: 240 5% 12%;
-    --gray: 0 0% 82%;
-    --gray2: 260 3% 59%;
-    --secondary-foreground: 240 5% 12% 0.7;
-
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary-foreground: 210 40% 98%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --primary-light: #ADD7F6;
-    --primary-base: #87BFFF;
-    --primary-dark: #3F8EFC;
-    --primary-darker: #2667FF;
-    --primary-deep: #3B28CC;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+  body {
+    font-family: var(--font-body);
+    color: hsl(var(--color-text));
+    -webkit-font-smoothing: antialiased;
   }
 }
 
+/* Типографическая шкала для полноценного сайта */
 @layer utilities {
-  .text-gradient {
-    background: linear-gradient(135deg, #0D47A1, #2A6F97);
+  .text-gradient-brand {
+    background: linear-gradient(135deg, #22007c, #a78bfa);
     -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
+  }
+
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .btn-warm-glow {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #02010a;
+    box-shadow:
+      0 0 0 1px rgba(245, 158, 11, 0.3),
+      0 4px 16px -2px rgba(245, 158, 11, 0.35),
+      0 0 32px -8px rgba(245, 158, 11, 0.2);
+  }
+  .btn-warm-glow:hover {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    box-shadow:
+      0 0 0 1px rgba(245, 158, 11, 0.5),
+      0 8px 24px -4px rgba(245, 158, 11, 0.45),
+      0 0 40px -8px rgba(245, 158, 11, 0.3);
+  }
+
+  .bg-brand-card {
+    background: var(--gradient-brand-card);
+    box-shadow: var(--shadow-brand-card);
+  }
+
+  .prose-lead {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    .prose-lead {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Премиум-карточка: лёгкий 3D, уголок светлой палитры */
+  .card-premium {
+    position: relative;
+    background: linear-gradient(145deg, rgba(4, 5, 46, 0.95) 0%, rgba(20, 1, 82, 0.9) 100%);
+    border: 1px solid rgba(167, 139, 250, 0.25);
+    box-shadow: 0 4px 24px -4px rgba(2, 1, 10, 0.5), 0 0 0 1px rgba(167, 139, 250, 0.08);
+  }
+  .card-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, transparent 50%, rgba(167, 139, 250, 0.12) 50%);
+    border-radius: 0 0.75rem 0 0;
+    pointer-events: none;
+  }
+
+  /* Точечный декоративный элемент «часы» — акцент ценности */
+  .deco-dot-premium {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #a78bfa;
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.6);
+  }
+
+  /* 3D неоновая кнопка/карточка: утопленная грань + свечение обводки */
+  .btn-3d-glow {
+    position: relative;
+    background: linear-gradient(180deg, rgba(20, 1, 82, 0.95) 0%, rgba(34, 0, 124, 0.9) 100%);
+    border: 1px solid rgba(167, 139, 250, 0.45);
+    box-shadow:
+      inset 0 2px 12px rgba(2, 1, 10, 0.5),
+      inset 0 -1px 0 rgba(167, 139, 250, 0.2),
+      0 0 0 1px rgba(167, 139, 250, 0.5),
+      0 0 24px rgba(167, 139, 250, 0.3),
+      0 0 48px rgba(34, 0, 124, 0.25);
+  }
+  .btn-3d-glow:hover {
+    box-shadow:
+      inset 0 2px 12px rgba(2, 1, 10, 0.5),
+      inset 0 -1px 0 rgba(167, 139, 250, 0.25),
+      0 0 0 1px rgba(167, 139, 250, 0.6),
+      0 0 28px rgba(167, 139, 250, 0.4),
+      0 0 56px rgba(34, 0, 124, 0.35);
+  }
+
+  /* Карточка таймлайна — современный вариант: светлая поверхность, один мягкий объём, чёткий неон */
+  .card-timeline-3d {
+    position: relative;
+    background: linear-gradient(165deg, rgba(34, 0, 124, 0.35) 0%, rgba(20, 1, 82, 0.5) 40%, rgba(4, 5, 46, 0.7) 100%);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(167, 139, 250, 0.45);
+    transform-style: preserve-3d;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 0 0 1px rgba(167, 139, 250, 0.25),
+      0 4px 24px -4px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(167, 139, 250, 0.15),
+      0 0 40px -12px rgba(167, 139, 250, 0.2);
+  }
+  .card-timeline-3d:hover {
+    background: linear-gradient(165deg, rgba(34, 0, 124, 0.4) 0%, rgba(20, 1, 82, 0.55) 40%, rgba(4, 5, 46, 0.75) 100%);
+    border-color: rgba(167, 139, 250, 0.6);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 0 0 1px rgba(167, 139, 250, 0.35),
+      0 12px 40px -8px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(167, 139, 250, 0.2),
+      0 0 56px -8px rgba(167, 139, 250, 0.35);
+  }
+
+  /* Узел таймлайна — сфера с бликом и тенью */
+  .timeline-node-3d {
+    background: radial-gradient(circle at 30% 30%, rgba(196, 181, 253, 0.9), rgba(167, 139, 250, 0.8) 40%, rgba(34, 0, 124, 0.9));
+    box-shadow:
+      inset -2px -2px 6px rgba(0, 0, 0, 0.4),
+      inset 2px 2px 4px rgba(255, 255, 255, 0.2),
+      0 6px 16px rgba(0, 0, 0, 0.5),
+      0 0 24px rgba(167, 139, 250, 0.6);
+  }
+
+  /* Карточки секции «Ваш следующий шаг» — яркие, резкие, не тусклые */
+  .card-section-three {
+    background: linear-gradient(165deg, rgba(34, 0, 124, 0.4) 0%, rgba(20, 1, 82, 0.55) 50%, rgba(4, 5, 46, 0.85) 100%);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(167, 139, 250, 0.5);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      0 0 0 1px rgba(167, 139, 250, 0.2),
+      0 8px 32px -8px rgba(0, 0, 0, 0.4),
+      0 0 48px -16px rgba(167, 139, 250, 0.25);
+  }
+  .card-section-three:hover {
+    border-color: rgba(167, 139, 250, 0.65);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.12),
+      0 0 0 1px rgba(167, 139, 250, 0.35),
+      0 12px 40px -8px rgba(0, 0, 0, 0.35),
+      0 0 56px -12px rgba(167, 139, 250, 0.35);
+  }
+
+  .timeline-spine-3d {
+    background: linear-gradient(90deg, transparent, rgba(167, 139, 250, 0.15) 20%, rgba(167, 139, 250, 0.4) 50%, rgba(167, 139, 250, 0.15) 80%, transparent);
+    box-shadow:
+      0 0 16px rgba(167, 139, 250, 0.5),
+      0 0 32px rgba(34, 0, 124, 0.3),
+      inset 0 0 8px rgba(167, 139, 250, 0.3);
+  }
+}
+
+
+/* Появление контента баннера при загрузке — каскадом */
+@keyframes banner-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-banner-in {
+  animation: banner-content-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-banner-in-delay-1 { animation-delay: 0.12s; }
+.animate-banner-in-delay-2 { animation-delay: 0.24s; }
+.animate-banner-in-delay-3 { animation-delay: 0.36s; }
+.animate-banner-in-delay-4 { animation-delay: 0.48s; }
+.animate-banner-in-delay-5 { animation-delay: 0.6s; }
+
+/* Каскадное появление карточек внутри секции */
+.reveal-wrapper .stagger-item {
+  opacity: 0;
+}
+
+.reveal-wrapper.animate-section-reveal .stagger-item {
+  animation: fade-in-up 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Лёгкая «живость» фона — только при предпочитаемом движении */
+@media (prefers-reduced-motion: no-preference) {
+  .animate-float-slow {
+    animation: float-slow 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-banner-in,
+  .animate-banner-in-delay-1,
+  .animate-banner-in-delay-2,
+  .animate-banner-in-delay-3,
+  .animate-banner-in-delay-4,
+  .animate-banner-in-delay-5 {
+    animation-duration: 0.3s;
+  }
+  .reveal-wrapper.animate-section-reveal .stagger-item {
+    animation-duration: 0.25s;
   }
 }

@@ -1,57 +1,7 @@
-import React from "react";
+import { type FC } from "react";
 import SectionTitle from "../SectionTitle";
+import { SectionDecor } from "../atoms/SectionDecor";
 
-const SectionTwo: React.FC = () => {
-  return (
-    <section
-      className="py-16 md:py-20 relative "
-      style={{
-        background:
-          "linear-gradient(to bottom, hsl(220, 70%, 96%), hsl(220, 70%, 90%))",
-      }}
-    >
-      <div className="container">
-        {/* Заголовок секции */}
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <SectionTitle
-            title="Но при этом:"
-            color="hsl(245,64%,30%)"
-            align="center"
-          />
-        </div>
-        {/* Список пунктов */}
-        <div className="relative max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-          {issues.map((issue, index) => (
-            <div
-              key={index}
-              className="group relative bg-gradient-to-br from-[hsl(245,40%,50%)] to-[hsl(210,40%,45%)] rounded-xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
-            >
-              {/* Нумерация */}
-              <div className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-white text-[hsl(245,64%,45%)] font-bold text-xl flex items-center justify-center shadow-md">
-                {index + 1}
-              </div>
-
-              {/* Контент карточки */}
-              <div className="relative z-10">
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:underline">
-                  {issue.title}
-                </h3>
-                <p className="text-base text-[hsl(210,80%,90%)] leading-relaxed">
-                  {issue.description}
-                </p>
-              </div>
-
-              {/* Декоративный элемент */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-white/10 to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-// Данные для списка
 const issues = [
   {
     title: "Много обучений без результата",
@@ -75,5 +25,86 @@ const issues = [
     description: "Не настроены процессы для автоматизации продаж.",
   },
 ];
+
+const rotations = ["-2deg", "1deg", "-1.5deg", "0.5deg", "-1deg"];
+/* Лента «скотч» на карточках — ротация из палитры */
+const tapes = [
+  "bg-warm-500",
+  "bg-rose-400",
+  "bg-teal-400",
+  "bg-warm-400",
+  "bg-rose-500",
+];
+
+const SectionTwo: FC = () => (
+    <section
+      className="relative overflow-hidden py-6 md:py-8 bg-palette-100"
+      aria-labelledby="section-two-heading"
+    >
+      <SectionDecor />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        aria-hidden
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        }}
+      />
+
+      <div className="container relative">
+        <div className="max-w-4xl mx-auto text-center mb-6">
+          <SectionTitle
+            title="Но при этом:"
+            color="#f0eef6"
+            align="center"
+          />
+          <p id="section-two-heading" className="sr-only">
+            Текущие сложности, с которыми можно работать в программе
+          </p>
+        </div>
+        <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
+          {issues.map((issue, index) => (
+            <li
+              key={index}
+              className="flex justify-center"
+              style={{
+                transform: `rotate(${rotations[index % rotations.length]})`,
+              }}
+            >
+              <article
+                className="stagger-item group relative w-full max-w-sm origin-center rounded-xl border border-palette-600/25 px-4 pb-4 pt-6 shadow-lg card-premium transition-all duration-300 hover:shadow-xl hover:-translate-y-1 hover:scale-[1.02] hover:border-palette-500/40 focus-within:ring-2 focus-within:ring-palette-500/40 focus-within:ring-offset-2 focus-within:ring-offset-palette-200 focus-within:outline-none bg-palette-200/90"
+                style={{
+                  animationDelay: `${index * 90}ms`,
+                  boxShadow: "0 4px 20px rgba(4,5,46,0.2), 0 1px 4px rgba(20,1,82,0.15)",
+                }}
+              >
+                <div
+                  className={`absolute left-1/2 top-0 h-4 w-16 -translate-x-1/2 -translate-y-1/2 rounded-sm ${tapes[index % tapes.length]} opacity-95`}
+                  aria-hidden
+                />
+                <span
+                  className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-warm-500/20 text-sm font-bold text-warm-400 ring-2 ring-warm-500/40"
+                  aria-hidden
+                >
+                  {index + 1}
+                </span>
+                <h3 className="font-heading mb-2 text-base font-bold leading-tight text-white sm:text-lg">
+                  {issue.title}
+                </h3>
+                <p className="font-sans text-sm leading-relaxed text-palette-800 md:text-base">
+                  {issue.description}
+                </p>
+              </article>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mx-auto mt-6 flex flex-col items-center gap-3">
+          <p className="font-sans text-center text-sm italic text-warm-200 md:text-base">
+            Знакомо? С этим как раз и работаем в программе.
+          </p>
+        </div>
+      </div>
+    </section>
+);
 
 export default SectionTwo;

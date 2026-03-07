@@ -1,27 +1,5 @@
 import Banner from "./banner";
-import React from "react";
-import { CourseIntroductionSection } from "./courseIntroductionSection";
-import FeaturesSection from "./featuresSection";
-import { Footer } from "./footer";
-import { LeaderInvitationSection } from "./leaderInvitationSection";
-import { FullTextAccordion } from "./modulesAccordion";
-import { PreorderSurveyButton } from "./preorderSurveyButton";
-import { PricingPlan } from "./pricingPlan";
-import { ProjectSystem } from "./projectSystem";
-import { RealCasesSection } from "./realCasesSection";
-import { SevenWeeksTransformation } from "./sevenWeeksTransformation";
-import { UniqueCourseSection } from "./uniqueCourseSection";
-import { VideoTeaser } from "./videoTeaser";
-import { WhatAwaitsYou } from "./whatAwaitsYou";
-import {
-  CheckCircle,
-  DollarSign,
-  Users,
-  Briefcase,
-  Book,
-  Clock,
-} from "lucide-react";
-import Timeline from "./sections/sectopnOne";
+import Timeline from "./sections/sectionOne";
 import SectionTwo from "./sections/SectionTwo";
 import SectionThree from "./sections/SectionThree";
 import SectionFour from "./sections/SectionFour";
@@ -31,38 +9,34 @@ import SectionSeven from "./sections/SectionSeven";
 import SectionEight from "./sections/SectionEight";
 import SectionNine from "./sections/SectionNine";
 import SectionTen from "./sections/SectionTen";
+import { SectionReveal } from "../../atoms/SectionReveal";
+
+const sections = [
+  { id: "vam-suda", Component: Timeline },
+  { id: "no-pri-etom", Component: SectionTwo },
+  { id: "vash-shag", Component: SectionThree },
+  { id: "chto-vas-zhdet", Component: SectionFour },
+  { id: "rezultaty", Component: SectionFive },
+  { id: "gotovy", Component: SectionSix },
+  { id: "moduli", Component: SectionSeven },
+  { id: "analogi", Component: SectionEight },
+  { id: "tarif", Component: SectionNine },
+  { id: "zhdu", Component: SectionTen },
+];
 
 const GroupsPage = () => {
   return (
-    <div className="">
+    <div className="min-h-screen bg-palette-100">
       <Banner />
-      <div>
-        <Timeline />
-
-        <SectionTwo />
-        <SectionThree />
-        <SectionFour />
-        <SectionFive />
-        
-        <SectionSix />
-        <SectionSeven />
-        <SectionEight />
-        <SectionNine />
-        <SectionTen />
-      </div>
-
-      {/* <FeaturesSection />
-      <PreorderSurveyButton />
-      <ProjectSystem />
-      <VideoTeaser />
-      <WhatAwaitsYou />
-      <SevenWeeksTransformation />
-      <FullTextAccordion />
-      <UniqueCourseSection />
-      <CourseIntroductionSection />
-      <RealCasesSection />
-      <PricingPlan /> */}
-      <Footer />
+      <main className="relative flex flex-col">
+        {sections.map(({ id, Component }, index) => (
+          <SectionReveal key={id} delay={index * 60}>
+            <div className="relative">
+              <Component />
+            </div>
+          </SectionReveal>
+        ))}
+      </main>
     </div>
   );
 };

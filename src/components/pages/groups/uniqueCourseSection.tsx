@@ -1,6 +1,4 @@
-import React from "react";
 import { SectionHeader } from "./atoms/sectionHeader";
-import { SectionText } from "./atoms/sectionText";
 
 export function UniqueCourseSection() {
   return (
