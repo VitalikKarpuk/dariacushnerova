@@ -10,7 +10,7 @@ const Footer = () => {
           Все права защищены
         </p>
         <p className="text-xs sm:text-sm md:text-base mb-2">
-          ИП Кушнерова Д.В. <br />
+          ИП Карпук Д.В. <br />
           ‌УНП 291787139
         </p>
         <p className="text-xs sm:text-sm md:text-sm text-gray-400">

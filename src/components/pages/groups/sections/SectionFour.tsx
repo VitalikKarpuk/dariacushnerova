@@ -23,9 +23,9 @@ const features = [
   { icon: Gamepad, title: `${GROUP_MEETINGS} групповых встречи`, description: "Работа в группе, новые возможности и сотрудничество." },
   { icon: FileText, title: "Домашние задания", description: "Обратная связь на выполненные задания от экспертов." },
   { icon: MessageSquare, title: "Чат поддержки и общения", description: "Постоянная связь и обсуждение с группой участников." },
-  { icon: Briefcase, title: "Коллаборации с участниками", description: "Возможность совместных проектов и взаимной поддержки." },
+  { icon: Briefcase, title: "Коллаборации с участниками и с Дарьей Карпук", description: "" },
   { icon: UserPlus, title: "Новые клиенты", description: "Получение клиентов через взаимодействие в группе." },
-  { icon: Target, title: "Полное погружение", description: "Детальный разбор вашей ситуации и помощь до результата." },
+  { icon: Target, title: "Полное погружение", description: "Детальный разбор вашей ситуации и работа до результата." },
 ];
 
 const iconBgClasses = [

@@ -12,10 +12,10 @@ import { SectionDecor } from "../atoms/SectionDecor";
 import { WireframeGrid } from "../atoms/WireframeGrid";
 
 const roadmapData = [
-  { id: 1, title: "Выстроить систему", description: "Хотите выстроить понятную систему в работе и бизнесе.", icon: CheckCircle },
+  { id: 1, title: "Выстроить систему", description: "Хотите выстроить понятную и удобную систему в работе.", icon: CheckCircle },
   { id: 2, title: "Увеличить доход", description: "Увеличить количество клиентов и сделать доход стабильно растущим.", icon: DollarSign },
-  { id: 3, title: "Собрать команду", description: "Собрать команду и делегировать.", icon: Users },
-  { id: 4, title: "Стать руководителем", description: "Перейти из сотрудника в руководителя и управлять эффективно.", icon: Briefcase },
+  { id: 3, title: "Собрать команду", description: "Создать своу команду и научиться делегировать.", icon: Users },
+  { id: 4, title: "Стать руководителем", description: "Научиться легко вести инстаграмм и легко проявляться.", icon: Briefcase },
   { id: 5, title: "Создать обучение", description: "Создать свои курсы и обучения.", icon: Book },
   { id: 6, title: "Оптимизировать работу", description: "Меньше работать, но больше зарабатывать.", icon: Clock },
 ];

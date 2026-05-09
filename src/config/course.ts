@@ -5,14 +5,14 @@
 
 // ─── Поток ───────────────────────────────────────────────
 export const STREAM_NUMBER = 11;
-export const STREAM_START_DATE = "12 июня";
+export const STREAM_START_DATE = "1 июля";
 
 // ─── Программа ───────────────────────────────────────────
 export const COURSE_NAME = "Я ЛИДЕР";
 export const DURATION_WEEKS = 7;
-export const INDIVIDUAL_MEETINGS = 5;
+export const INDIVIDUAL_MEETINGS = 6;
 export const GROUP_MEETINGS = 2;
-export const GRADUATES_COUNT = "60+";
+export const GRADUATES_COUNT = "100+";
 
 // ─── Цены и скидки ──────────────────────────────────────
 export const DISCOUNT_PERCENT = 40;
@@ -37,9 +37,9 @@ export const INSTAGRAM_CASES = [
 
 // ─── Автор ──────────────────────────────────────────────
 export const AUTHOR_NAME = "Дарьей Карпук";
-export const AUTHOR_NAME_GENITIVE = "Дарьи Кушнеровой";
-export const AUTHOR_ROLE = "бизнес-психолог, ментор";
-export const AUTHOR_COMPANY = "ИП Кушнерова Д.В.";
+export const AUTHOR_NAME_GENITIVE = "Дарьи Карпук";
+export const AUTHOR_ROLE = "коуч, психолог";
+export const AUTHOR_COMPANY = "ИП Карпук Д.В.";
 export const AUTHOR_TAX_ID = "УНП 291787139";
 export const COPYRIGHT_YEARS = "2020–2026";
 

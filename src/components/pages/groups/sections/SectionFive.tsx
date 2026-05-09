@@ -135,7 +135,8 @@ const SectionFive: FC = () => {
                 </p>
                 <h3 className="font-heading mt-3 text-base font-bold leading-snug text-white md:text-lg">
                   Только участникам этого потока в подарок —{" "}
-                  <span className="text-rose-300">доступ к интенсиву «Секреты успешных сторис»</span>
+                  <span className="text-rose-300">доступ к интенсиву «Секреты успешных сторис», </span>
+                  где вы научитесь легко вести контент и упакуете свой профиль
                 </h3>
               </div>
             </div>

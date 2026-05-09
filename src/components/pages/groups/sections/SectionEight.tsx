@@ -64,12 +64,7 @@ const SectionEight: FC = () => {
             <div className="grid gap-0 md:grid-cols-[1fr,auto]">
               <div className="flex flex-col justify-center px-6 py-6 md:px-8 md:py-8">
                 <p className="font-sans text-base text-palette-800 font-medium md:text-lg leading-relaxed">
-                  <strong className="text-white">{COURSE_NAME}</strong> — первый онлайн-курс, где {DURATION_LABEL} вы работаете с командой
-                  специалистов в психологии и бизнесе.
-                </p>
-                <p className="font-sans mt-3 text-base text-palette-700 md:text-lg leading-relaxed">
-                  Получая стабильные результаты: финансы, проекты, сотрудничества,
-                  выступления.
+                  <strong className="text-white">{COURSE_NAME}</strong> — первый онлайн-курс, где вы работаете с внутреними процесами и установками, мешающими вам двигаться, и так же создаете внешний путь через стратегические действия
                 </p>
               </div>
               <div className="flex flex-col items-center justify-center gap-4 border-t border-palette-500/25 bg-palette-600/8 px-6 py-6 md:border-t-0 md:border-l md:border-l-palette-500/25 md:px-8 md:py-8">
@@ -104,8 +99,7 @@ const SectionEight: FC = () => {
               Кейсы участников
             </h3>
             <p className="font-sans max-w-2xl text-sm text-palette-700 font-medium md:text-base">
-              Здесь вы можете просмотреть кейсы реальных участников и убедиться, что
-              выйти на х3 в доходе за {DURATION_LABEL} реально!
+              Посмотрите истории учеников и убедитесь, что все ваши желания реальны
             </p>
           </div>
 
