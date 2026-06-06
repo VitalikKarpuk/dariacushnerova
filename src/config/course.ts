@@ -45,7 +45,7 @@ export const COPYRIGHT_YEARS = "2020–2026";
 
 // ─── Производные строки (для удобства) ──────────────────
 export const STREAM_BADGE = `${STREAM_NUMBER}-й поток`;
-export const STREAM_BADGE_WITH_DATE = `${STREAM_NUMBER}-й поток · старт ${STREAM_START_DATE}`;
+export const STREAM_BADGE_WITH_DATE = `${STREAM_NUMBER}-й поток · дата старта уточняется`;
 export const CTA_PREORDER = `АНКЕТА ПРЕДЗАПИСИ в ${STREAM_NUMBER} поток`;
 export const CTA_DISCOUNT = `Записаться со скидкой ${DISCOUNT_PERCENT}%`;
 export const CTA_BOOK_DISCOUNT = `Забронировать место на обучение с ${DISCOUNT_PERCENT}% скидкой`;
