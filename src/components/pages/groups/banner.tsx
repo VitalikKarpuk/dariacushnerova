@@ -11,7 +11,6 @@ import {
   DURATION_LABEL_ADJ,
   AUTHOR_NAME,
   AUTHOR_ROLE,
-  DISCOUNT_PERCENT,
 } from "../../../config/course";
 
 const proofItems = [

@@ -47,12 +47,13 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("./Inter-VariableFont_slnt,wght.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
+/*
+ * Inter здесь больше не объявлен. Локальный файл — несабсетченный вариативный
+ * TTF на 786 КБ, и он объявлял только вес 400: для основного текста браузер
+ * предпочитал точное совпадение веса и качал его, хотя тот же Inter уже
+ * приходит из Google Fonts как woff2 c кириллицей на 47 КБ (см. index.html).
+ * Грузились оба. Сам файл оставлен в fonts/ — на него больше нет ссылок.
+ */
 
 @font-face {
   font-family: "Signika";

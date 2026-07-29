@@ -24,6 +24,19 @@ const config = {
         heading: ["var(--font-heading)", ...fontFamily.sans],
       },
       colors: {
+        /* ─── Design system «Linear / Modern» ───────────────────────
+           Изолированная шкала: ничего из старой палитры не переопределяет.
+           Ближний чёрный + один насыщенный индиго-акцент. */
+        linear: {
+          deep: "#020203",
+          base: "#050506",
+          elevated: "#0a0a0c",
+          input: "#0F0F12",
+          fg: "#EDEDEF",
+          "fg-muted": "#8A8F98",
+          accent: "#5E6AD2",
+          "accent-bright": "#6872D9",
+        },
         /* Основная палитра */
         palette: {
           DEFAULT: "#04052e",
@@ -199,6 +212,21 @@ const config = {
       boxShadow: {
         card: "var(--shadow-card)",
         "card-hover": "var(--shadow-card-hover)",
+        /* ─── Linear: тени всегда многослойные ───────────────────────
+           контур + мягкая диффузия + ambient глубина (+ акцентное свечение) */
+        "linear-card":
+          "0 0 0 1px rgba(255,255,255,0.06), 0 2px 20px rgba(0,0,0,0.4), 0 0 40px rgba(0,0,0,0.2)",
+        "linear-card-hover":
+          "0 0 0 1px rgba(255,255,255,0.1), 0 8px 40px rgba(0,0,0,0.5), 0 0 80px rgba(94,106,210,0.1)",
+        "linear-accent":
+          "0 0 0 1px rgba(94,106,210,0.5), 0 4px 12px rgba(94,106,210,0.3), inset 0 1px 0 0 rgba(255,255,255,0.2)",
+        "linear-accent-hover":
+          "0 0 0 1px rgba(94,106,210,0.6), 0 6px 20px rgba(94,106,210,0.45), inset 0 1px 0 0 rgba(255,255,255,0.25)",
+        "linear-inset": "inset 0 1px 0 0 rgba(255,255,255,0.1)",
+      },
+      transitionTimingFunction: {
+        /* expo-out — единственная кривая для интеракций этой системы */
+        expo: "cubic-bezier(0.16, 1, 0.3, 1)",
       },
       keyframes: {
         "accordion-down": {
@@ -238,6 +266,23 @@ const config = {
           "0%": { backgroundPosition: "200% 0" },
           "100%": { backgroundPosition: "-200% 0" },
         },
+        /* ─── Linear: дрейф ambient-блобов и мерцание акцентного текста ─── */
+        "linear-blob": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-20px) rotate(1deg)" },
+        },
+        "linear-blob-alt": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "50%": { transform: "translate(24px, -16px) scale(1.04)" },
+        },
+        "linear-pulse": {
+          "0%, 100%": { opacity: "0.6" },
+          "50%": { opacity: "1" },
+        },
+        "linear-shimmer": {
+          "0%": { backgroundPosition: "0% 50%" },
+          "100%": { backgroundPosition: "200% 50%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -249,6 +294,10 @@ const config = {
         "fade-in": "fade-in 0.5s ease-out forwards",
         "scale-in": "scale-in 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards",
         "float": "float 4s ease-in-out infinite",
+        "linear-blob": "linear-blob 9s ease-in-out infinite",
+        "linear-blob-alt": "linear-blob-alt 11s ease-in-out infinite",
+        "linear-pulse": "linear-pulse 8s ease-in-out infinite",
+        "linear-shimmer": "linear-shimmer 6s linear infinite",
       },
 
       backgroundImage: {

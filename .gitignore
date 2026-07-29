@@ -14,6 +14,10 @@
 
 dist
 
+# исходники арта (оригиналы из Kling) — в сборку не попадают,
+# в src/assets/goals лежат сжатые webp
+/art-source
+
 # misc
 .DS_Store
 .env.local

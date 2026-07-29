@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!--
+    Фавиконка «DK».
+
+    Плитка залита акцентом, буквы белые — в 16 px двухцветная монограмма
+    из логотипа (индиго D + белая K) сливается, а цветная плитка ещё и
+    заметнее в полосе вкладок, чем тёмная.
+
+    Начертание — системный bold sans, не Manrope: внешние шрифты в контексте
+    фавиконки не подгружаются. На 16 px разница между ними неразличима.
+  -->
+  <rect width="64" height="64" rx="14" fill="#5E6AD2"/>
+  <text
+    x="32" y="44"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif"
+    font-size="37" font-weight="800" letter-spacing="-2"
+    fill="#FFFFFF"
+  >DK</text>
+</svg>

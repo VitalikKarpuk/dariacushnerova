@@ -8,7 +8,6 @@ import {
   FORM_URL,
   CTA_BOOK_DISCOUNT,
   DISCOUNT_PERCENT,
-  DURATION_LABEL,
   COURSE_NAME,
   INSTAGRAM_CASES,
 } from "../../../../config/course";

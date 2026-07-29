@@ -1,16 +1,59 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.ico" />
+  <!-- Иконка вкладки «DK». SVG для современных браузеров, PNG — фолбэк
+       для тех, кто SVG в favicon не умеет (в первую очередь Safari). -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#02010a" />
-  <title>Я Лидер</title>
+  <!-- Совпадает с bg-linear-base у страницы: иначе на телефоне рамка браузера
+       отличалась от макушки страницы на заметный тон. -->
+  <meta name="theme-color" content="#050506" />
+  <title>Я ЛИДЕР — 7-недельная программа для экспертов</title>
+  <meta name="description"
+    content="7-недельная программа для экспертов, желающих вырасти профессионально и финансово. С Дарьей Карпук — коуч, психолог." />
+
+  <!-- Превью при отправке ссылки (Telegram, Instagram, WhatsApp, соцсети).
+       ВАЖНО: og:url и абсолютный og:image нужно дописать после привязки домена —
+       часть краулеров (в первую очередь Facebook) относительные пути не резолвит:
+         <meta property="og:url"   content="https://ВАШ-ДОМЕН/" />
+         <meta property="og:image" content="https://ВАШ-ДОМЕН/og-image.jpg" />
+       Картинка собрана скриптом, а не вручную: фон — арт из art-source/sections,
+       текст наложен рендером в браузере, поэтому шрифты те же, что на сайте. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="Я ЛИДЕР" />
+  <meta property="og:title" content="Я ЛИДЕР — 7-недельная программа для экспертов" />
+  <meta property="og:description"
+    content="7-недельная программа для экспертов, желающих вырасти профессионально и финансово. С Дарьей Карпук — коуч, психолог." />
+  <meta property="og:image" content="/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Я ЛИДЕР — программа для экспертов с Дарьей Карпук" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Я ЛИДЕР — 7-недельная программа для экспертов" />
+  <meta name="twitter:description"
+    content="7-недельная программа для экспертов, желающих вырасти профессионально и финансово." />
+  <meta name="twitter:image" content="/og-image.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Заголовки: переключаем в index.css через --font-heading. Все с кириллицей. -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Manrope:wght@400..700&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Open+Sans:wght@400;500;600;700&display=swap&subset=latin,cyrillic" rel="stylesheet">
+  <!--
+    Только то, что реально применяется к тексту. Все с кириллицей.
+      Inter    — --font-body в index.css, основной текст обеих страниц
+      DM Sans  — --font-heading в index.css
+      Manrope  — логотип DK (LinearLogo)
+    Из запроса убраны Plus Jakarta Sans, Montserrat, Nunito Sans и Open Sans:
+    ни одного упоминания в коде, а 53 КБ блокирующего рендер CSS они стоили.
+    Instrument Serif остаётся — им набран заголовок /axon
+    (класс font-['Instrument_Serif'], поэтому поиск по «Instrument Serif»
+    с пробелом его не находит).
+  -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@400..800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700&family=Instrument+Serif:ital@0;1&display=swap&subset=latin,cyrillic" rel="stylesheet">
 </head>
 
 <body>
