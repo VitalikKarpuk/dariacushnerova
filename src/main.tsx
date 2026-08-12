@@ -12,9 +12,10 @@ import { Layout } from "./components/Layout";
  * `.then` с переименованием нужен из-за именованных экспортов: React.lazy
  * ждёт модуль с полем `default`.
  */
-const GroupsPage = lazy(() =>
-  import("./components/pages/groups/page").then((m) => ({ default: m.GroupsPage }))
-);
+// Прошлая главная — Группа Роста. Оставлена закомментированной на случай возврата.
+// const GroupsPage = lazy(() =>
+//   import("./components/pages/groups/page").then((m) => ({ default: m.GroupsPage }))
+// );
 const Programs = lazy(() =>
   import("./components/pages/programs").then((m) => ({ default: m.Programs }))
 );
@@ -38,9 +39,12 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
       <Suspense fallback={Fallback}>
         <Routes>
           <Route path="/axon" element={<AxonPage />} />
+          {/* Lider теперь главная: и на "/", и на прежнем "/lider" (старые ссылки не ломаются) */}
+          <Route path="/" element={<LiderDarkPage />} />
           <Route path="/lider" element={<LiderDarkPage />} />
           <Route path="/" element={<Layout />}>
-            <Route index element={<GroupsPage />} />
+            {/* Прошлая главная — GroupsPage:
+            <Route index element={<GroupsPage />} /> */}
             <Route path="programs" element={<Programs />} />
           </Route>
         </Routes>

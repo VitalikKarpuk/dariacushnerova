@@ -59,24 +59,44 @@ export function OutcomesSection() {
         </SpotlightCard>
       </Reveal>
 
+      {/* Бонус подсвечен слабее, чем финальный «Подарок для вас»: ореол уже,
+          бейдж мельче. Два одинаково сильных акцента на странице гасят друг
+          друга — здесь бонус к результатам, там финальный CTA. */}
       <Reveal className="mt-6">
-        <SpotlightCard variant="accent" className="p-7 md:p-9">
-          <div className="flex flex-col gap-5 md:flex-row md:items-start">
-            <IconBox>
-              <Gift className="h-5 w-5" aria-hidden />
-            </IconBox>
-            <div>
-              <Label>Эксклюзивный бонус</Label>
-              <p className="mt-4 text-base font-medium leading-relaxed text-linear-fg md:text-lg">
-                Только участникам этого потока в подарок —{" "}
-                <ShimmerText className="font-semibold">
-                  доступ к интенсиву «Секреты успешных сторис»,{" "}
-                </ShimmerText>
-                где вы научитесь легко вести контент и упакуете свой профиль
-              </p>
+        <div className="relative">
+          {/* Ореол снаружи карточки: её `overflow-hidden` обрезал бы размытие. */}
+          <div
+            className="pointer-events-none absolute -inset-2 rounded-[1.75rem] bg-[#5E6AD2]/[0.18] blur-2xl animate-linear-pulse md:-inset-3"
+            aria-hidden
+          />
+          <SpotlightCard
+            variant="accent"
+            className="border-[#5E6AD2]/40 p-7 shadow-[0_0_0_1px_rgba(94,106,210,0.3),0_6px_40px_rgba(94,106,210,0.2)] md:p-9"
+          >
+            <div className="flex flex-col gap-5 md:flex-row md:items-start">
+              {/* Не общий IconBox: там нейтральное стекло, а этот блок должен
+                  читаться акцентом ещё до чтения текста. */}
+              <span
+                className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-[#5E6AD2]/50 bg-[#5E6AD2]/25 text-white shadow-[0_0_24px_rgba(94,106,210,0.4)]"
+                aria-hidden
+              >
+                <Gift className="h-5 w-5 animate-float" />
+              </span>
+              <div>
+                <span className="inline-flex items-center rounded-full border border-[#5E6AD2]/50 bg-[#5E6AD2]/20 px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-widest text-white md:text-xs">
+                  Эксклюзивный бонус
+                </span>
+                <p className="mt-4 text-base font-medium leading-relaxed text-linear-fg md:text-lg">
+                  Только участникам этого потока в подарок —{" "}
+                  <ShimmerText className="font-semibold">
+                    доступ к интенсиву «Секреты успешных сторис»,{" "}
+                  </ShimmerText>
+                  где вы научитесь легко вести контент и упакуете свой профиль
+                </p>
+              </div>
             </div>
-          </div>
-        </SpotlightCard>
+          </SpotlightCard>
+        </div>
       </Reveal>
     </Section>
   );
